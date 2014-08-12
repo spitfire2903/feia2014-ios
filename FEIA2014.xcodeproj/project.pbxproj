@@ -22,6 +22,12 @@
 		70D3FE74199A534F009DB094 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE58199A534F009DB094 /* CoreData.framework */; };
 		70D3FE7C199A534F009DB094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70D3FE7A199A534F009DB094 /* InfoPlist.strings */; };
 		70D3FE7E199A534F009DB094 /* FEIA2014Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D3FE7D199A534F009DB094 /* FEIA2014Tests.m */; };
+		70D3FE88199A5A22009DB094 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D3FE87199A5A22009DB094 /* Storyboard_iPad.storyboard */; };
+		70D3FE8A199A5A32009DB094 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D3FE89199A5A32009DB094 /* Storyboard_iPhone.storyboard */; };
+		70D3FE8E199A5B2E009DB094 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D3FE8D199A5B2E009DB094 /* MenuViewController.m */; };
+		70D3FE92199A5FE7009DB094 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D3FE91199A5FE7009DB094 /* Event.m */; };
+		70D3FE95199A5FF5009DB094 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D3FE94199A5FF5009DB094 /* Place.m */; };
+		70D3FE98199A6000009DB094 /* Partners.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D3FE97199A6000009DB094 /* Partners.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,16 @@
 		70D3FE79199A534F009DB094 /* FEIA2014Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FEIA2014Tests-Info.plist"; sourceTree = "<group>"; };
 		70D3FE7B199A534F009DB094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		70D3FE7D199A534F009DB094 /* FEIA2014Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FEIA2014Tests.m; sourceTree = "<group>"; };
+		70D3FE87199A5A22009DB094 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
+		70D3FE89199A5A32009DB094 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
+		70D3FE8C199A5B2E009DB094 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		70D3FE8D199A5B2E009DB094 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		70D3FE90199A5FE7009DB094 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		70D3FE91199A5FE7009DB094 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		70D3FE93199A5FF5009DB094 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		70D3FE94199A5FF5009DB094 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		70D3FE96199A6000009DB094 /* Partners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partners.h; sourceTree = "<group>"; };
+		70D3FE97199A6000009DB094 /* Partners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partners.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +131,15 @@
 		70D3FE5A199A534F009DB094 /* FEIA2014 */ = {
 			isa = PBXGroup;
 			children = (
+				70D3FE8F199A5FCC009DB094 /* Model */,
+				70D3FE8B199A5AF8009DB094 /* Controllers */,
 				70D3FE63199A534F009DB094 /* AppDelegate.h */,
 				70D3FE64199A534F009DB094 /* AppDelegate.m */,
 				70D3FE69199A534F009DB094 /* Images.xcassets */,
 				70D3FE66199A534F009DB094 /* FEIA2014.xcdatamodeld */,
 				70D3FE5B199A534F009DB094 /* Supporting Files */,
+				70D3FE87199A5A22009DB094 /* Storyboard_iPad.storyboard */,
+				70D3FE89199A5A32009DB094 /* Storyboard_iPhone.storyboard */,
 			);
 			path = FEIA2014;
 			sourceTree = "<group>";
@@ -151,6 +171,28 @@
 				70D3FE7A199A534F009DB094 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70D3FE8B199A5AF8009DB094 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70D3FE8C199A5B2E009DB094 /* MenuViewController.h */,
+				70D3FE8D199A5B2E009DB094 /* MenuViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		70D3FE8F199A5FCC009DB094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70D3FE90199A5FE7009DB094 /* Event.h */,
+				70D3FE91199A5FE7009DB094 /* Event.m */,
+				70D3FE93199A5FF5009DB094 /* Place.h */,
+				70D3FE94199A5FF5009DB094 /* Place.m */,
+				70D3FE96199A6000009DB094 /* Partners.h */,
+				70D3FE97199A6000009DB094 /* Partners.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +272,8 @@
 			files = (
 				70D3FE5F199A534F009DB094 /* InfoPlist.strings in Resources */,
 				70D3FE6A199A534F009DB094 /* Images.xcassets in Resources */,
+				70D3FE8A199A5A32009DB094 /* Storyboard_iPhone.storyboard in Resources */,
+				70D3FE88199A5A22009DB094 /* Storyboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +294,11 @@
 			files = (
 				70D3FE68199A534F009DB094 /* FEIA2014.xcdatamodeld in Sources */,
 				70D3FE65199A534F009DB094 /* AppDelegate.m in Sources */,
+				70D3FE92199A5FE7009DB094 /* Event.m in Sources */,
+				70D3FE95199A5FF5009DB094 /* Place.m in Sources */,
 				70D3FE61199A534F009DB094 /* main.m in Sources */,
+				70D3FE8E199A5B2E009DB094 /* MenuViewController.m in Sources */,
+				70D3FE98199A6000009DB094 /* Partners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
