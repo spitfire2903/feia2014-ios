@@ -12,7 +12,7 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 
 @interface MenuViewController ()
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -31,10 +31,12 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 {
     [super viewDidLoad];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    //self.tableView.delegate = self;
+    //[self.tableView setShouldGroupAccessibilityChildren:YES];
+    
+    //self.tableView.dataSource = self;
 
-    self.title = NSLocalizedString(@"menuTitle", @"Title of menu section");
+    //self.title = NSLocalizedString(@"menuTitle", @"Title of menu section");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -48,125 +50,126 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDelegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    int rows = 0;
-    
-    // Return the number of rows in the section.
-    if(section == 0){
-        // Meu calendario section
-        rows = 1;
-    } else if(section == 1){
-        // Informações FEIA section
-        rows = 6;
-    }
-    return rows;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    int section;
-    UITableViewCell *cell = nil;
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:MENU_CELL_IDENTIFIER forIndexPath:indexPath];
-    section = indexPath.section;
-    
-    if(section == 0){
-        cell.textLabel.text = NSLocalizedString(@"meuCalendarioLink", @"String for 'Meu calendario' item");
-    } else if(section == 1){
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 0){
         
+    } else{
         switch (indexPath.row) {
             case 0:
-                cell.textLabel.text = NSLocalizedString(@"apresentacaoLink", @"String for 'Apresentacoes' item");
                 
                 break;
             case 1:
-                cell.textLabel.text = NSLocalizedString(@"oficinaLink", @"String for 'Oficinas' item");
                 
                 break;
+                
             case 2:
-                cell.textLabel.text = NSLocalizedString(@"noiteLink", @"String for 'Noites FEIA' item");
                 
                 break;
+                
             case 3:
-                cell.textLabel.text = NSLocalizedString(@"parceiroLink", @"String for 'Parceiros' item");
                 
                 break;
+                
             case 4:
-                cell.textLabel.text = NSLocalizedString(@"mapaLink", @"String for 'Mapa' item");
                 
                 break;
             case 5:
-                cell.textLabel.text = NSLocalizedString(@"contatoLink", @"String for 'Contato' item");
                 
                 break;
         }
     }
-    
-    return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+
+#pragma mark -
+#pragma mark SASlideMenuDataSource
+
+-(NSIndexPath*) selectedIndexPath{
+    return [NSIndexPath indexPathForRow:0 inSection:0];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+-(NSString*) segueIdForIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return @"teste";
+    }else if (indexPath.row == 1){
+        return @"teste2";
+    }else{
+        return @"shades";
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
+-(Boolean) allowContentViewControllerCachingForIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(Boolean) disablePanGestureForIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row ==0) {
+        return YES;
+    }
+    return NO;
 }
 
- */
+-(void) configureMenuButton:(UIButton *)menuButton{
+    menuButton.frame = CGRectMake(0, 0, 40, 29);
+    [menuButton setImage:[UIImage imageNamed:@"ic_menu"] forState:UIControlStateNormal];
+}
+
+-(void) configureSlideLayer:(CALayer *)layer{
+    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.shadowOpacity = 0.3;
+    layer.shadowOffset = CGSizeMake(-5, 0);
+    layer.shadowRadius = 5;
+    layer.masksToBounds = NO;
+    layer.shadowPath =[UIBezierPath bezierPathWithRect:layer.bounds].CGPath;
+}
+
+-(CGFloat) leftMenuVisibleWidth{
+    return 260;
+}
+-(void) prepareForSwitchToContentViewController:(UINavigationController *)content{
+    UIViewController* controller = [content.viewControllers objectAtIndex:0];
+
+    if ([controller isKindOfClass:[BaseViewController class]]) {
+        BaseViewController* viewController = (BaseViewController*)controller;
+        viewController.menuViewController = self;
+    }
+}
+
+#pragma mark -
+#pragma mark SASlideMenuDelegate
+
+
+-(void) slideMenuWillSlideIn:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuWillSlideIn");
+}
+-(void) slideMenuDidSlideIn:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuDidSlideIn");
+}
+-(void) slideMenuWillSlideToSide:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuWillSlideToSide");
+}
+-(void) slideMenuDidSlideToSide:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuDidSlideToSide");
+}
+-(void) slideMenuWillSlideOut:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuWillSlideOut");
+}
+-(void) slideMenuDidSlideOut:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuDidSlideOut");
+}
+-(void) slideMenuWillSlideToLeft:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuWillSlideToLeft");
+}
+-(void) slideMenuDidSlideToLeft:(UINavigationController *)selectedContent{
+    NSLog(@"slideMenuDidSlideToLeft");
+}
+
 
 @end
