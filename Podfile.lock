@@ -1,0 +1,25 @@
+PODS:
+  - ChameleonFramework (1.1.0)
+  - DZNSegmentedControl (1.2)
+  - Masonry (0.5.3)
+  - ObjectiveSugar (1.1.0)
+  - SASlideMenu (2.0.3)
+  - SGActionView (0.0.1)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - DZNSegmentedControl
+  - Masonry
+  - ObjectiveSugar
+  - SASlideMenu
+  - SGActionView
+
+SPEC CHECKSUMS:
+  ChameleonFramework: 9dd83c1e66b4385ed15cb8c18fac12f6a56bbe0d
+  DZNSegmentedControl: 8b99ddb1c7dfa311422aae027d3f64aa3d7315cb
+  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
+  SASlideMenu: 93a4ff0a25fdd00ce9b8c77e1d98bc4ffb9cb648
+  SGActionView: c86ac2ea09bc440979738f500804e84a1f9d8b14
+
+COCOAPODS: 0.33.1
