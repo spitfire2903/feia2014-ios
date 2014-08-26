@@ -36,4 +36,13 @@
 }
 
 
+-(void)showLoading{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+-(void)hideLoading{
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+
+
 @end

@@ -8,18 +8,12 @@
 
 #import "MainViewController.h"
 
-
-static NSString* const SEGUE_CALENDAR = @"calendarSegue";
-static NSString* const SEGUE_WORKSHOP = @"workshopSegue";
-static NSString* const SEGUE_EXHIBITION = @"exhibitionSegue";
-static NSString* const SEGUE_PARTY = @"partySegue";
-static NSString* const SEGUE_PARTNER = @"partnerSegue";
-static NSString* const SEGUE_MAP = @"mapSegue";
-static NSString* const SEGUE_CONTACT = @"contactSegue";
-
+static NSString* const FEIA_CELL = @"feiaCell";
+static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
 
 @interface MainViewController ()
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -34,15 +28,12 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     return self;
 }
 
-- (IBAction)button:(id)sender {
-    
-    [self performSegueWithIdentifier:SEGUE_CALENDAR sender:self];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,15 +42,73 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    Event* eventSelected = nil;
+    
+    for (NSIndexPath* indexPath in [self.collectionView indexPathsForSelectedItems]) {
+        eventSelected = [[[EventManager sharedDatabase] events] objectAtIndex:indexPath.row];
+    }
+    
+    if ([[segue identifier] isEqualToString:EVENT_INFO_SEGUE]) {
+    
+        EventInfoViewController *info = [segue destinationViewController];
+        info.event = eventSelected;
+    }
 }
-*/
+
+#pragma mark - UICollectionViewDelegate/DataSource
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UIColor* bkColor = nil;
+    FeiaCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FEIA_CELL forIndexPath:indexPath];
+    Event* event = [[[EventManager sharedDatabase] events] objectAtIndex:indexPath.row];
+    
+    [cell cellWithName:event.name andDate:event.date];
+    
+    switch (event.category) {
+        case EVENT_CATEGORY_DANCING:
+            bkColor = [UIColor dancingColor];
+            break;
+        case EVENT_CATEGORY_MUSIC:
+            bkColor = [UIColor musicColor];
+            break;
+        case EVENT_CATEGORY_VISUAL_ARTS:
+            bkColor = [UIColor visualArtsColor];
+            break;
+        case EVENT_CATEGORY_PERFORMING_ARTS:
+            bkColor = [UIColor performingArtsColor];
+            break;
+        case EVENT_CATEGORY_MEDIALOGY:
+            bkColor = [UIColor medialogyColor];
+            break;
+            
+    }
+    
+    cell.backgroundColor = bkColor;
+    
+    return cell;
+
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [[[EventManager sharedDatabase] events] count];
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    [self performSegueWithIdentifier:EVENT_INFO_SEGUE sender:self];
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+
+    return 1.0;
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 2.0;
+}
+
 
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "FeiaCollectionViewCell.h"
+#import "EventInfoViewController.h"
 
-@interface MainViewController : BaseViewController
+@interface MainViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @end

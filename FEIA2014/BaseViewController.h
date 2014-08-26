@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <SASlideMenu/SASlideMenuViewController.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <ObjectiveSugar/ObjectiveSugar.h>
+#import "UIColor+FEIA.h"
+#import "NSDate+FEIA.h"
+
+#import "EventManager.h"
 
 @interface BaseViewController : UIViewController
 
 @property (nonatomic,strong) SASlideMenuViewController* menuViewController;
+
+-(void)showLoading;
+-(void)hideLoading;
 
 @end

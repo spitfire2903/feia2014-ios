@@ -11,10 +11,6 @@
 
 @interface Place()
 
-@property (nonatomic) NSString* name;
-@property (nonatomic) NSString* shortDescription;
-@property (nonatomic) NSString* address;
-@property (nonatomic) NSString* site;
 
 @end
 

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FEIA2014-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FEIA2014-Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16E0C430CF3A49BABF7D2735</key>
+		<key>01FE9FB532C14457B5443408</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79818FA8990D4E7CA6C74C62</key>
+		<key>15113D2F45F74A55B93F6403</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9269FE5A88A4D9CBDFB46ED</key>
+		<key>309F1FB8F08C4E0AA3CF31AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC3D4BAD003B466D85C5E6AC</key>
+		<key>4465B5C679E6476BB915B89B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6828C5C8FF6400C8E2D66BD</key>
+		<key>55BE280569414D788A79F4C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC2BA07D3D6B487C88236F40</key>
+		<key>6CE48E06E8E6427FA5F05800</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB4EFFB0B53847389EE69F11</key>
+		<key>7E7D85268BD24E4BB2A41253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDB26E5459C446E9B3F33593</key>
 		<dict>
 			<key>primary</key>
 			<true/>

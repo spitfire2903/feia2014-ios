@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC2BA07D3D6B487C88236F40"
+               BlueprintIdentifier = "FDB26E5459C446E9B3F33593"
                BuildableName = "libPods-FEIA2014-Masonry.a"
                BlueprintName = "Pods-FEIA2014-Masonry"
                ReferencedContainer = "container:Pods.xcodeproj">

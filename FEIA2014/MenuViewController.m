@@ -10,6 +10,15 @@
 
 static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 
+static NSString* const SEGUE_FEIA = @"feiaSegue";
+static NSString* const SEGUE_CALENDAR = @"calendarSegue";
+static NSString* const SEGUE_WORKSHOP = @"workshopSegue";
+static NSString* const SEGUE_EXHIBITION = @"exhibitionSegue";
+static NSString* const SEGUE_PARTY = @"partySegue";
+static NSString* const SEGUE_PARTNER = @"partnerSegue";
+static NSString* const SEGUE_MAP = @"mapSegue";
+static NSString* const SEGUE_CONTACT = @"contactSegue";
+
 @interface MenuViewController ()
 
 //@property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -51,7 +60,7 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 }
 
 #pragma mark - UITableViewDelegate
-
+/*
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         
@@ -82,7 +91,7 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
     }
 }
 
-
+*/
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return YES;
 }
@@ -96,13 +105,49 @@ static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 }
 
 -(NSString*) segueIdForIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        return @"teste";
-    }else if (indexPath.row == 1){
-        return @"teste2";
-    }else{
-        return @"shades";
+    NSString* segueName = nil;
+    
+    if(indexPath.section == 0){
+        switch (indexPath.row) {
+            case 0:
+                segueName = SEGUE_FEIA;
+                
+                break;
+            case 1:
+                segueName = SEGUE_CALENDAR;
+                
+                break;
+        }
+    } else if(indexPath.section == 1){
+        switch (indexPath.row) {
+            case 0:
+                segueName = SEGUE_EXHIBITION;
+                
+                break;
+            case 1:
+                segueName = SEGUE_WORKSHOP;
+                
+                break;
+            case 2:
+                segueName = SEGUE_PARTY;
+                
+                break;
+            case 3:
+                segueName = SEGUE_PARTNER;
+                
+                break;
+            case 4:
+                segueName = SEGUE_MAP;
+                
+                break;
+            case 5:
+                segueName = SEGUE_CONTACT;
+                
+                break;
+        }
     }
+    
+    return segueName;
 }
 
 -(Boolean) allowContentViewControllerCachingForIndexPath:(NSIndexPath *)indexPath{

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79818FA8990D4E7CA6C74C62"
+               BlueprintIdentifier = "01FE9FB532C14457B5443408"
                BuildableName = "libPods-FEIA2014-SGActionView.a"
                BlueprintName = "Pods-FEIA2014-SGActionView"
                ReferencedContainer = "container:Pods.xcodeproj">

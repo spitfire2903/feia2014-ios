@@ -10,17 +10,23 @@
 
 @interface Event()
 
-@property (nonatomic) NSString* name;
-@property (nonatomic) int type;
-@property (nonatomic) int category;
-@property (nonatomic) NSDate* date;
-@property (nonatomic) NSString* shortDescription;
-@property (nonatomic) Place* place;
-@property (nonatomic) NSString* site;
-
 @end
 
 
 @implementation Event
+
++(Event*)eventWithName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
+    Event* event = nil;
+    
+    event = [[Event alloc] init];
+    
+    [event setName:name];
+    [event setDate:date];
+    [event setShortDescription:description];
+    [event setCategory:category];
+    [event setType:type];
+    
+    return event;
+}
 
 @end

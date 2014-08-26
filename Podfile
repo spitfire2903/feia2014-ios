@@ -8,6 +8,7 @@ target "FEIA2014" do
 	pod 'SGActionView'
 	pod 'DZNSegmentedControl'
 	pod 'Masonry'
+    pod 'MBProgressHUD'
 end
 
 target "FEIA2014Tests" do

@@ -1,5 +1,5 @@
 #include "Pods-FEIA2014-DZNSegmentedControl.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/DZNSegmentedControl" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ChameleonFramework" "${PODS_ROOT}/Headers/DZNSegmentedControl" "${PODS_ROOT}/Headers/Masonry" "${PODS_ROOT}/Headers/ObjectiveSugar" "${PODS_ROOT}/Headers/SASlideMenu" "${PODS_ROOT}/Headers/SGActionView"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/DZNSegmentedControl" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ChameleonFramework" "${PODS_ROOT}/Headers/DZNSegmentedControl" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/Masonry" "${PODS_ROOT}/Headers/ObjectiveSugar" "${PODS_ROOT}/Headers/SASlideMenu" "${PODS_ROOT}/Headers/SGActionView"
 OTHER_LDFLAGS = -ObjC ${PODS_FEIA_____DZNSEGMENTEDCONTROL_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

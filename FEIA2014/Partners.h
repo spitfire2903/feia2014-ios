@@ -14,4 +14,10 @@ typedef enum {
 
 @interface Partners : NSObject
 
+@property (nonatomic) NSString* name;
+@property (nonatomic) int category;
+@property (nonatomic) NSString* shortDescription;
+@property (nonatomic) NSString* address;
+@property (nonatomic) NSString* site;
+
 @end
