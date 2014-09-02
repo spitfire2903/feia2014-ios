@@ -10,4 +10,6 @@
 
 @interface WorkshopViewController : BaseViewController
 
+@property (nonatomic) EventCategory category;
+
 @end

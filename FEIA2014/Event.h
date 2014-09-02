@@ -20,18 +20,22 @@ typedef enum {
     EVENT_CATEGORY_MUSIC,
     EVENT_CATEGORY_VISUAL_ARTS,
     EVENT_CATEGORY_PERFORMING_ARTS,
-    EVENT_CATEGORY_MEDIALOGY
+    EVENT_CATEGORY_MEDIALOGY,
+    EVENT_CATEGORY_GENERAL
 } EventCategory;
 
 @interface Event : NSObject
 
 @property (nonatomic) NSString* name;
-@property (nonatomic) int type;
-@property (nonatomic) int category;
+@property (nonatomic) EventType type;
+@property (nonatomic) EventCategory category;
 @property (nonatomic) NSDate* date;
 @property (nonatomic) NSString* shortDescription;
 @property (nonatomic) Place* place;
+@property (nonatomic) NSString* placeData;
 @property (nonatomic) NSString* site;
+
+-(UIImage*)getIcon;
 
 +(Event*)eventWithName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
 

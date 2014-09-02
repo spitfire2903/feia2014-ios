@@ -11,9 +11,11 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import "UIColor+FEIA.h"
+#import "UIImage+FEIA.h"
 #import "NSDate+FEIA.h"
-
 #import "EventManager.h"
+#import "Event.h"
+#import "FEIACategoryPickerTextField.h"
 
 @interface BaseViewController : UIViewController
 

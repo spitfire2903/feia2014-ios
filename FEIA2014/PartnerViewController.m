@@ -10,6 +10,9 @@
 
 @interface PartnerViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *parceirosLabel;
+
 @end
 
 @implementation PartnerViewController

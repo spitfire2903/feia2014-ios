@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4465B5C679E6476BB915B89B"
+               BlueprintIdentifier = "A176D4BE759B4152A592E099"
                BuildableName = "libPods-FEIA2014-DZNSegmentedControl.a"
                BlueprintName = "Pods-FEIA2014-DZNSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">

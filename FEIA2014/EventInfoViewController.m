@@ -28,6 +28,10 @@
     return self;
 }
 
+- (IBAction)saveEvent:(id)sender {
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -64,6 +68,37 @@
     }
     
     self.eventHeader.backgroundColor = bkColor;
+    
+    
+    
+    UIImage* image = nil;
+    /*
+    switch (self.event.category) {
+        case EVENT_CATEGORY_DANCING:
+            image = [UIImage imageNamed:@"bkg_dancing"];
+            break;
+        case EVENT_CATEGORY_MUSIC:
+            image = [UIImage imageNamed:@"bkg_music"];
+            break;
+        case EVENT_CATEGORY_VISUAL_ARTS:
+            image = [UIImage imageNamed:@"bkg_visual_arts"];
+            break;
+        case EVENT_CATEGORY_PERFORMING_ARTS:
+            image = [UIImage imageNamed:@"bkg_performing_arts"];
+            break;
+        case EVENT_CATEGORY_MEDIALOGY:
+            image = [UIImage imageNamed:@"bkg_medialogy"];
+            break;
+    }
+    
+    self.eventHeader.backgroundColor = [[UIColor colorWithPatternImage:image] colorWithAlphaComponent:0.4];
+     */
+    /*
+    image = [UIImage imageNamed:@"bkg_feia_2"];
+    self.eventHeader.backgroundColor = [UIColor colorWithPatternImage:image];
+      */
+    //self.eventName.textColor = [UIColor blackColor];
+    //self.eventDate.textColor = [UIColor blackColor];
     
     [self hideLoading];
 }

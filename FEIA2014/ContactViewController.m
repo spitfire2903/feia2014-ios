@@ -10,6 +10,10 @@
 
 @interface ContactViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *contactName;
+@property (weak, nonatomic) IBOutlet UITextField *contactEmail;
+@property (weak, nonatomic) IBOutlet UITextView *contactMessage;
+
 @end
 
 @implementation ContactViewController
@@ -19,6 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
     return self;
 }
@@ -27,6 +32,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.contactMessage.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.contactMessage.layer.borderWidth = 1;
+    self.contactMessage.layer.cornerRadius = 5;
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,4 +10,6 @@
 
 @interface ExhibitionViewController : BaseViewController
 
+@property (nonatomic) EventCategory category;
+
 @end

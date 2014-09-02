@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface FeiaCollectionViewCell : UICollectionViewCell
 
--(void)cellWithName:(NSString*)name andDate:(NSDate*)date;
+-(void)cellWithEvent:(Event*)event;
 
 @end

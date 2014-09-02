@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CE48E06E8E6427FA5F05800"
+               BlueprintIdentifier = "E278111699BE40EE9260C864"
                BuildableName = "libPods-FEIA2014-SASlideMenu.a"
                BlueprintName = "Pods-FEIA2014-SASlideMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

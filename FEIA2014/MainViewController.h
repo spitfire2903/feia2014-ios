@@ -11,6 +11,6 @@
 #import "FeiaCollectionViewCell.h"
 #import "EventInfoViewController.h"
 
-@interface MainViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface MainViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,FEIACategoryPickerDelegate>
 
 @end

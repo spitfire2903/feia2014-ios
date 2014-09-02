@@ -8,7 +8,10 @@
 
 #import "CalendarViewController.h"
 
-@interface CalendarViewController ()
+@interface CalendarViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *noEventsView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -27,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning

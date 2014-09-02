@@ -59,27 +59,32 @@
 }
 
 + (UIColor *) dancingColor{
-    return [self colorWithHexString:@"#d73027"];
+    return [self colorWithHexString:@"ED2459"];
+    //return [self colorWithHexString:@"#d73027"];
 }
 
 
 + (UIColor *) musicColor{
-    return [self colorWithHexString:@"#fc8d59"];
+    return [self colorWithHexString:@"B5353B"];
+    //return [self colorWithHexString:@"#fc8d59"];
 }
 
 
 + (UIColor *) visualArtsColor{
-    return [self colorWithHexString:@"#238443"/*@"#fee090"*/];
+    return [self colorWithHexString:@"DB5727"];
+    //return [self colorWithHexString:@"#238443"/*@"#fee090"*/];
 }
 
 
 + (UIColor *) performingArtsColor{
-    return [self colorWithHexString:@"#91bfdb"];
+    return [self colorWithHexString:@"782014"];
+    //return [self colorWithHexString:@"#91bfdb"];
 }
 
 
 + (UIColor *) medialogyColor{
-    return [self colorWithHexString:@"#4575b4"];
+    return [self colorWithHexString:@"AB5333"];
+    //return [self colorWithHexString:@"#4575b4"];
 }
 /*
  #d73027    #fc8d59    #fee090

@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Ricardo Nunes de Miranda. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "BaseViewController.h"
-#import "Event.h"
+
 
 @interface EventInfoViewController : BaseViewController
 
