@@ -12,7 +12,9 @@
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import "UIColor+FEIA.h"
 #import "UIImage+FEIA.h"
+#import "UIFont+FEIA.h"
 #import "NSDate+FEIA.h"
+#import "UIView+FEIA.h"
 #import "EventManager.h"
 #import "Event.h"
 #import "FEIACategoryPickerTextField.h"

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UIColor+FEIA.h"
+#import "UIFont+FEIA.h"
 
 @implementation AppDelegate
 
@@ -25,6 +26,32 @@
      */
     //UIColor* backgroundNavigationBar = [UIColor colorWithHexString:@"7D5555"];//[UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
     //[[UINavigationBar appearance] setBarTintColor:backgroundNavigationBar];
+    //CGFloat defaultSize = [UIButton appearance].titleLabel.font.pointSize;
+    
+    NSDictionary* titleSettings = @{
+        UITextAttributeFont: [UIFont geosansLightWithSize:16],
+        UITextAttributeTextColor: [UIColor blackColor]
+    };
+    NSDictionary* barButtonSettings =
+  @{
+    NSFontAttributeName: [UIFont geosansLightWithSize:14]
+                                        
+                                        };
+    
+    [[UIButton appearance].titleLabel setFont:[UIFont geosansLightWithSize:15]];
+    [[UILabel appearance] setFont:[UIFont geosansLightWithSize:17]];
+    [[UITextField appearance] setFont:[UIFont geosansLightWithSize:14]];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleSettings];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];
+    
+    /*[[UINavigationBar appearance] setTitleTextAttributes:
+        [NSDictionary dictionaryWithObjectsAndKeys:
+             [UIColor blackColor],
+             UITextAttributeTextColor,
+             [UIFont geosansLightWithSize:16],
+             UITextAttributeFont
+         , nil]
+     ];*/
     
     return YES;
 }
