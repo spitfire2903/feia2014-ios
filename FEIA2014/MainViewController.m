@@ -49,6 +49,7 @@ static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    [[self.collectionView backgroundView] removeFromSuperview];
     
     UIImageView* backgroundImage = nil;
     UIImage* image = nil;

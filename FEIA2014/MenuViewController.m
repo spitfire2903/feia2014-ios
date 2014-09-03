@@ -40,7 +40,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if(cell){
-        cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+        cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
     }
     
     return cell;
@@ -57,8 +57,8 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     
     image = [image imageByApplyingAlpha:0.4];
     
-    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 260, self.tableView.frame.size.height)];
-    backgroundImage.contentMode = UIViewContentModeScaleAspectFit;
+    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 160, self.tableView.frame.size.height)];
+    backgroundImage.contentMode = UIViewContentModeScaleAspectFill;
     backgroundImage.image = image;
     
     self.tableView.backgroundView = backgroundImage;
