@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+FEIA.h"
 
 @implementation AppDelegate
 
@@ -22,8 +23,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
      */
-    UIColor* backgroundNavigationBar = [UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
-    [[UINavigationBar appearance] setBarTintColor:backgroundNavigationBar];
+    //UIColor* backgroundNavigationBar = [UIColor colorWithHexString:@"7D5555"];//[UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
+    //[[UINavigationBar appearance] setBarTintColor:backgroundNavigationBar];
     
     return YES;
 }

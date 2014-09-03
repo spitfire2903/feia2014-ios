@@ -17,7 +17,8 @@
     SASlideMenuViewController* source = self.sourceViewController;
     SASlideMenuRootViewController* rootController = source.rootController;
     UINavigationController* destination = self.destinationViewController;
-/*
+
+    /*
     UIColor* backgroundNavigationBar = [UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
     
     [destination.navigationBar setBarStyle:UIBarStyleBlack];
