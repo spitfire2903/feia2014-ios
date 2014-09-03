@@ -16,6 +16,7 @@
 #import "EventManager.h"
 #import "Event.h"
 #import "FEIACategoryPickerTextField.h"
+#import "AppDelegate.h"
 
 @interface BaseViewController : UIViewController
 

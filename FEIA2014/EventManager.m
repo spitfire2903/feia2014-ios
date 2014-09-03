@@ -11,6 +11,7 @@
 @interface EventManager()
 
 @property (strong,nonatomic) NSMutableArray *eventList;
+@property (strong,nonatomic) NSMutableArray *myEventList;
 
 @end
 
@@ -32,6 +33,7 @@ static EventManager *_eventManager = nil;
     
     if (self){
         self.eventList = [[NSMutableArray alloc] init];
+        self.myEventList = [[NSMutableArray alloc] init];
         
         [self baseInit];
     }
@@ -59,13 +61,39 @@ static EventManager *_eventManager = nil;
     return [self.eventList copy];
 }
 
+
+-(NSArray *)myEvents
+{
+    
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"MyEvent" inManagedObjectContext:context ];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:entityDescription];
+    
+    NSError *error;
+    
+    return [context executeFetchRequest:request error:&error];
+    //return [self.myEventList copy];
+}
+/*
+-(NSDictionary*) myEventsDict{
+    NSDictionary* events = nil;
+    
+    
+}*/
+
 #pragma mark - Private methods
 
 -(void) baseInit{
 //    NSString* name = nil;
 //    NSString* description = nil;
     NSArray *category = @[@"Dança", @"Música", @"Artes Visuas", @"Artes Cênicas", @"Midialogia"];
-    
+    __block int eventId = 0;
     [category each:^(id object) {
         //NSLog(@"Car: %@", object);
         int categoryIndex = [category indexOfObject:object];
@@ -76,13 +104,17 @@ static EventManager *_eventManager = nil;
             NSString* description = [NSString stringWithFormat:@"Apresentação Descrição %@ %d", object, index];
             NSDate* date = [NSDate randomDateInYearOfDate];
             
-            [self.eventList addObject:[Event eventWithName:name andDate:date andDescription:description andType:EVENT_TYPE_EXHIBITION andCategory:categoryIndex]];
-            
+           [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_EXHIBITION andCategory:categoryIndex]];
+           
+            eventId++;
+           
             name = [NSString stringWithFormat:@"Oficina %@ %d", object, index];
             description = [NSString stringWithFormat:@"Oficina Descrição %@ %d", object, index];
             date = [NSDate randomDateInYearOfDate];
             
-            [self.eventList addObject:[Event eventWithName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:categoryIndex]];
+            [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:categoryIndex]];
+           
+           eventId++;
         }];
     }];
     

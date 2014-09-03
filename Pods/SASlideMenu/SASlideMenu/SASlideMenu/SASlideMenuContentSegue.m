@@ -17,7 +17,17 @@
     SASlideMenuViewController* source = self.sourceViewController;
     SASlideMenuRootViewController* rootController = source.rootController;
     UINavigationController* destination = self.destinationViewController;
-
+/*
+    UIColor* backgroundNavigationBar = [UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
+    
+    [destination.navigationBar setBarStyle:UIBarStyleBlack];
+    [destination.navigationBar setTranslucent:NO];
+    [destination.navigationBar setBackgroundColor:backgroundNavigationBar];
+    //[destination.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundColor:backgroundNavigationBar];
+    */
     UIButton* menuButton = [[UIButton alloc] init];
     if ([rootController.leftMenu.slideMenuDataSource respondsToSelector:@selector(configureMenuButton:)]) {
         [rootController.leftMenu.slideMenuDataSource configureMenuButton:menuButton];

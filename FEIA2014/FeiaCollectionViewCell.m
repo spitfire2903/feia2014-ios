@@ -60,7 +60,7 @@
             break;
     }
     
-    self.backgroundColor = [UIColor colorWithPatternImage:bkgImage];
+    self.backgroundColor = [UIColor clearColor];//[UIColor colorWithPatternImage:bkgImage];
 }
 
 /*

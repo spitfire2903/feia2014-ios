@@ -26,6 +26,7 @@ typedef enum {
 
 @interface Event : NSObject
 
+@property (nonatomic) NSNumber* eventId;
 @property (nonatomic) NSString* name;
 @property (nonatomic) EventType type;
 @property (nonatomic) EventCategory category;
@@ -37,6 +38,6 @@ typedef enum {
 
 -(UIImage*)getIcon;
 
-+(Event*)eventWithName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
++(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
 
 @end

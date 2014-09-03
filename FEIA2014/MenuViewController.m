@@ -36,9 +36,32 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     return self;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if(cell){
+        cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    }
+    
+    return cell;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImageView* backgroundImage = nil;
+    UIImage* image = nil;
+    
+    image = [UIImage imageNamed:@"ic_cara_feia_marrom"];//@"ic_logo_feia_rosa"];
+    
+    image = [image imageByApplyingAlpha:0.4];
+    
+    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 260, self.tableView.frame.size.height)];
+    backgroundImage.contentMode = UIViewContentModeScaleAspectFit;
+    backgroundImage.image = image;
+    
+    self.tableView.backgroundView = backgroundImage;
     
     //self.tableView.delegate = self;
     //[self.tableView setShouldGroupAccessibilityChildren:YES];

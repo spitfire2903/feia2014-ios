@@ -27,6 +27,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /*
+    UIColor* backgroundNavigationBar = [UIColor colorWithRed:125/255 green:85/255 blue:85/255 alpha:1];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self.navigationController.navigationBar setBackgroundColor:backgroundNavigationBar];
+    //[destination.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundColor:backgroundNavigationBar];
+    */
 }
 
 - (void)didReceiveMemoryWarning

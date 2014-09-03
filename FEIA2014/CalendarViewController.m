@@ -10,8 +10,9 @@
 
 @interface CalendarViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *noEventsView;
+//@property (weak, nonatomic) IBOutlet UILabel *noEventsView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) NSArray* myEvents;
 
 @end
 
@@ -33,6 +34,16 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    self.myEvents = [[EventManager sharedDatabase] myEvents];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +51,33 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.myEvents count];
+}
+
+
+#pragma mark - tableViewDelegate
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myEventsCell"];
+    
+    NSString *eventName = nil;//[[self.myEvents objectAtIndex:indexPath.row] valueForKey:@"eventId"];
+    NSNumber* eventId = [[self.myEvents objectAtIndex:indexPath.row] valueForKey:@"eventId"];
+    
+    
+    for (Event* e in [[EventManager sharedDatabase] events]) {
+        if([e.eventId intValue] == [eventId intValue]){
+            eventName = e.name;
+        }
+    }
+    
+    cell.textLabel.text = eventName;
+    
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDate;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UIView *eventHeader;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 
 @end
 
@@ -29,7 +30,34 @@
 }
 
 - (IBAction)saveEvent:(id)sender {
+    /*if([sender isKindOfClass:[UIButton class]]){
+        UIButton* button = sender;
+        
+        [sender setTitle:@"Salvo"];
+        [sender setReadOnly:YES];
+        [sender setUserInteractionEnabled:NO];
+    }*/
+    [self.btnSave setTitle:@"Salvo"];
+    self.btnSave.enabled = NO;
+    self.btnSave.tintColor = [UIColor darkGrayColor];
     
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //MyEvent* myEvent = [[MyEvent alloc] init];
+    
+    //myEvent.eventId = self.event.eventId;
+    
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSManagedObject *newEvent;
+    
+    NSError *error;
+    
+    newEvent = [NSEntityDescription insertNewObjectForEntityForName:@"MyEvent" inManagedObjectContext:context];
+    
+    [newEvent setValue:self.event.eventId forKey:@"eventId"];
+    
+    [context save:&error];
+
 }
 
 - (void)viewDidLoad
@@ -45,7 +73,7 @@
 
     self.eventName.text = self.event.name;
     self.eventDate.text = [dt stringFromDate:self.event.date];
-    //self.eventDescription.text = self.event.shortDescription;
+    self.eventDescription.text = self.event.shortDescription;
     
     [self.eventDescription sizeToFit];
     
@@ -69,6 +97,23 @@
     
     self.eventHeader.backgroundColor = bkColor;
     
+    NSArray* myEvents = nil;
+    
+    myEvents = [[EventManager sharedDatabase] myEvents];
+    
+    
+    
+    for (MyEvent* event in myEvents) {
+        NSLog(@"event.eventId %d", [event.eventId intValue]);
+        NSLog(@"self.event.eventId %d", [self.event.eventId intValue]);
+        NSLog(@"equals?! %d", [event.eventId intValue] == [self.event.eventId intValue]);
+        
+        if([event.eventId intValue] == [self.event.eventId intValue]){
+            [self.btnSave setTitle:@"Salvo"];
+            self.btnSave.enabled = NO;
+            self.btnSave.tintColor = [UIColor darkGrayColor];
+        }
+    }
     
     
     UIImage* image = nil;

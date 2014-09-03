@@ -12,12 +12,18 @@
 #import "Partners.h"
 #import "NSDate+FEIA.h"
 #import <ObjectiveSugar/ObjectiveSugar.h>
+#import "MyEvent.h"
+#import "AppDelegate.h"
 
 @interface EventManager : NSObject
 
 +(EventManager *) sharedDatabase;
 
 -(NSArray *) events;
+
+-(NSArray *) myEvents;
+
+-(NSDictionary*) myEventsDict;
 
 //-(NSArray *) calendarEvents;
 /*

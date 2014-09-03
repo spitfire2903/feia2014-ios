@@ -10,6 +10,7 @@
 		201B348319B43D680081CC1C /* FEIACategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348219B43D680081CC1C /* FEIACategoryPickerTextField.m */; };
 		201B348619B44FA30081CC1C /* UIImage+FEIA.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348519B44FA30081CC1C /* UIImage+FEIA.m */; };
 		201B348819B4660E0081CC1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201B348719B4660E0081CC1C /* MapKit.framework */; };
+		201B34AC19B684A30081CC1C /* MyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B34AB19B684A30081CC1C /* MyEvent.m */; };
 		20CB8A1919AC1C310076C1F8 /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CB8A1819AC1C310076C1F8 /* EventManager.m */; };
 		20CB8A1D19AC21510076C1F8 /* FeiaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CB8A1C19AC21510076C1F8 /* FeiaCollectionViewCell.m */; };
 		20CB8A2119AC34630076C1F8 /* UIColor+FEIA.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CB8A2019AC34630076C1F8 /* UIColor+FEIA.m */; };
@@ -66,6 +67,10 @@
 		201B348419B44FA30081CC1C /* UIImage+FEIA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FEIA.h"; sourceTree = "<group>"; };
 		201B348519B44FA30081CC1C /* UIImage+FEIA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FEIA.m"; sourceTree = "<group>"; };
 		201B348719B4660E0081CC1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		201B34AA19B684A30081CC1C /* MyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEvent.h; sourceTree = "<group>"; };
+		201B34AB19B684A30081CC1C /* MyEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEvent.m; sourceTree = "<group>"; };
+		201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeosansLight-Oblique.ttf"; sourceTree = "<group>"; };
+		201B34AF19B6C8830081CC1C /* GeosansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeosansLight.ttf; sourceTree = "<group>"; };
 		20CB8A1719AC1C310076C1F8 /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
 		20CB8A1819AC1C310076C1F8 /* EventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventManager.m; sourceTree = "<group>"; };
 		20CB8A1B19AC21510076C1F8 /* FeiaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeiaCollectionViewCell.h; sourceTree = "<group>"; };
@@ -164,6 +169,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		201B34AD19B6C6E80081CC1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */,
+				201B34AF19B6C8830081CC1C /* GeosansLight.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		20CB8A1A19AC212A0076C1F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,18 +237,19 @@
 		70D3FE5A199A534F009DB094 /* FEIA2014 */ = {
 			isa = PBXGroup;
 			children = (
-				201B348019B43D290081CC1C /* Views */,
-				20CB8A1E19AC34400076C1F8 /* Categories */,
-				20CB8A1A19AC212A0076C1F8 /* Cells */,
-				70D3FE8F199A5FCC009DB094 /* Model */,
-				70D3FE8B199A5AF8009DB094 /* Controllers */,
 				70D3FE63199A534F009DB094 /* AppDelegate.h */,
 				70D3FE64199A534F009DB094 /* AppDelegate.m */,
-				70D3FE69199A534F009DB094 /* Images.xcassets */,
+				20CB8A1E19AC34400076C1F8 /* Categories */,
+				20CB8A1A19AC212A0076C1F8 /* Cells */,
+				70D3FE8B199A5AF8009DB094 /* Controllers */,
 				70D3FE66199A534F009DB094 /* FEIA2014.xcdatamodeld */,
-				70D3FE5B199A534F009DB094 /* Supporting Files */,
+				70D3FE69199A534F009DB094 /* Images.xcassets */,
+				70D3FE8F199A5FCC009DB094 /* Model */,
+				201B34AD19B6C6E80081CC1C /* Resources */,
 				70D3FE87199A5A22009DB094 /* Storyboard_iPad.storyboard */,
 				70D3FE89199A5A32009DB094 /* Storyboard_iPhone.storyboard */,
+				70D3FE5B199A534F009DB094 /* Supporting Files */,
+				201B348019B43D290081CC1C /* Views */,
 			);
 			path = FEIA2014;
 			sourceTree = "<group>";
@@ -310,6 +325,8 @@
 				70D3FE97199A6000009DB094 /* Partners.m */,
 				20CB8A1719AC1C310076C1F8 /* EventManager.h */,
 				20CB8A1819AC1C310076C1F8 /* EventManager.m */,
+				201B34AA19B684A30081CC1C /* MyEvent.h */,
+				201B34AB19B684A30081CC1C /* MyEvent.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -467,6 +484,7 @@
 				201B348619B44FA30081CC1C /* UIImage+FEIA.m in Sources */,
 				20E3F07D199B02EB00BA1CA8 /* MapViewController.m in Sources */,
 				20E3F080199B02F200BA1CA8 /* ContactViewController.m in Sources */,
+				201B34AC19B684A30081CC1C /* MyEvent.m in Sources */,
 				20E3F074199B02CB00BA1CA8 /* ExhibitionViewController.m in Sources */,
 				20E3F07A199B02E200BA1CA8 /* PartnerViewController.m in Sources */,
 				20CB8A2419AC34850076C1F8 /* NSDate+FEIA.m in Sources */,

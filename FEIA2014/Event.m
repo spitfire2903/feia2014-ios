@@ -48,11 +48,12 @@
     return icon;
 }
 
-+(Event*)eventWithName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
++(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
     Event* event = nil;
     
     event = [[Event alloc] init];
     
+    [event setEventId:[NSNumber numberWithInt:eventId]];
     [event setName:name];
     [event setDate:date];
     [event setShortDescription:description];
