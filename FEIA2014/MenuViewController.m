@@ -62,6 +62,8 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     
     if(section == 2){
         sectionTitle = @"Oficinas";
+    } else{
+        sectionTitle = @" ";
     }
     
     return sectionTitle;

@@ -43,6 +43,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:titleSettings];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateDisabled];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateSelected];
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     

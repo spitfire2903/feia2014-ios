@@ -262,7 +262,6 @@ static EventManager *_eventManager = nil;
     descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     [self.eventList sortUsingDescriptors:@[descriptor]];
     
-    NSLog(@"%@", self.eventList);
 }
 
 +(NSDictionary*)eventDatesByIndex{

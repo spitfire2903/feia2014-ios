@@ -58,6 +58,8 @@
     dt = [[NSDateFormatter alloc] init];
     [dt setDateFormat:@"dd/MM - HH:mm"];
     
+    self.eventName.textColor = [UIColor whiteColor];
+    self.eventDate.textColor = [UIColor whiteColor];
     self.eventDescription.textColor = [UIColor colorwithR:139 g:55 b:23 a:1];
     
     self.eventName.font = [UIFont geosansLightWithSize:26];
