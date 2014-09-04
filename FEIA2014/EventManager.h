@@ -20,11 +20,13 @@
 +(EventManager *) sharedDatabase;
 
 -(NSArray *) events;
+-(NSDictionary *)eventsIdDict;
+-(NSDictionary *)eventsDict;
 
--(NSArray *) myEvents;
+-(NSArray *)myEvents;
+-(NSDictionary *)myEventsDict;
 
--(NSDictionary*) myEventsDict;
-
+-(BOOL)isEventFavorited:(NSNumber*)eventId;
 //-(NSArray *) calendarEvents;
 /*
 -(void) swapOutlawsAtIndex:(NSInteger)firstIndex otherIndex:(NSInteger)secondIndex;

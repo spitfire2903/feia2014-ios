@@ -37,13 +37,55 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    //UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:MENU_CELL_IDENTIFIER];
     
-    if(cell){
-        cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MENU_CELL_IDENTIFIER];
+        
+        //cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
     
+    cell.textLabel.text = [self getCellTitle:indexPath];
+    
+    cell.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
+    
     return cell;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString* sectionTitle = nil;
+    
+    if(section == 2){
+        sectionTitle = @"Oficinas";
+    }
+    
+    return sectionTitle;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    int number = 0;
+    
+    switch (section) {
+        case 0:
+            number = 1;
+            
+            break;
+        case 1:
+            number = 5;
+            
+            break;
+        case 2:
+            number = 6;
+            
+            break;
+    }
+    
+    return number;
 }
 
 - (void)viewDidLoad
@@ -130,45 +172,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
 -(NSString*) segueIdForIndexPath:(NSIndexPath *)indexPath{
     NSString* segueName = nil;
     
-    if(indexPath.section == 0){
-        switch (indexPath.row) {
-            case 0:
-                segueName = SEGUE_FEIA;
-                
-                break;
-            case 1:
-                segueName = SEGUE_CALENDAR;
-                
-                break;
-        }
-    } else if(indexPath.section == 1){
-        switch (indexPath.row) {
-            case 0:
-                segueName = SEGUE_EXHIBITION;
-                
-                break;
-            case 1:
-                segueName = SEGUE_WORKSHOP;
-                
-                break;
-            case 2:
-                segueName = SEGUE_PARTY;
-                
-                break;
-            case 3:
-                segueName = SEGUE_PARTNER;
-                
-                break;
-            case 4:
-                segueName = SEGUE_MAP;
-                
-                break;
-            case 5:
-                segueName = SEGUE_CONTACT;
-                
-                break;
-        }
-    }
+    segueName = [self getCellSegue:indexPath];
     
     return segueName;
 }
@@ -204,6 +208,8 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
 -(void) prepareForSwitchToContentViewController:(UINavigationController *)content{
     UIViewController* controller = [content.viewControllers objectAtIndex:0];
 
+    // TODO: fazer para mudar o eventCategory ou o eventType
+    
     if ([controller isKindOfClass:[BaseViewController class]]) {
         BaseViewController* viewController = (BaseViewController*)controller;
         viewController.menuViewController = self;
@@ -239,5 +245,139 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     NSLog(@"slideMenuDidSlideToLeft");
 }
 
+#pragma mark - Helpers
+
+-(NSString*)getCellTitle:(NSIndexPath*)indexPath{
+    NSString* cellText = nil;
+    
+    if(indexPath.section == 0){
+        switch (indexPath.row) {
+            case 0:
+                cellText = @"Meu Calendário";
+                
+                break;
+        }
+    } else if(indexPath.section == 1){
+        switch (indexPath.row) {
+            case 0:
+                cellText = @"Apresentações";
+                
+                break;
+            case 1:
+                cellText = @"Noites FEIA";
+                
+                break;
+            case 2:
+                cellText = @"Parceiros";
+                
+                break;
+            case 3:
+                cellText = @"Mapa";
+                
+                break;
+            case 4:
+                cellText = @"Contato";
+                
+                break;
+        }
+    } else if(indexPath.section == 2){
+        switch (indexPath.row) {
+            case 0:
+                cellText = @"Interdisciplinares";
+                
+                break;
+            case 1:
+                cellText = @"Artes Visuais";
+                
+                break;
+            case 2:
+                cellText = @"Artes Cênicas";
+                
+                break;
+            case 3:
+                cellText = @"Dança";
+                
+                break;
+            case 4:
+                cellText = @"Midialogia";
+                
+                break;
+            case 5:
+                cellText = @"Música";
+                
+                break;
+        }
+        
+    }
+
+    return cellText;
+}
+
+-(NSString*)getCellSegue:(NSIndexPath*)indexPath{
+    NSString* segueName = nil;
+    
+    if(indexPath.section == 0){
+        switch (indexPath.row) {
+            case 0:
+                segueName = SEGUE_CALENDAR;
+                
+                break;
+        }
+    } else if(indexPath.section == 1){
+        switch (indexPath.row) {
+            case 0:
+                segueName = SEGUE_FEIA;
+                
+                break;
+            case 1:
+                segueName = SEGUE_FEIA;//SEGUE_PARTY;
+                
+                break;
+            case 2:
+                segueName = SEGUE_PARTNER;
+                
+                break;
+            case 3:
+                segueName = SEGUE_MAP;
+                
+                break;
+            case 4:
+                segueName = SEGUE_CONTACT;
+                
+                break;
+        }
+    } else if(indexPath.section == 2){
+        switch (indexPath.row) {
+            case 0:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;
+                
+                break;
+            case 1:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                
+                break;
+            case 2:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                
+                break;
+            case 3:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                
+                break;
+            case 4:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                
+                break;
+            case 5:
+                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                
+                break;
+        }
+        
+    }
+    
+    return segueName;
+
+}
 
 @end

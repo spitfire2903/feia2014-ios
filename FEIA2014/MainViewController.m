@@ -62,9 +62,8 @@ static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
     backgroundImage.contentMode = UIViewContentModeScaleAspectFit;
     backgroundImage.image = image;
 
-    //self.collectionView.backgroundColor = [[UIColor colorWithPatternImage:[UIImage imageNamed:@"ic_logo_feia_rosa"]] colorWithAlphaComponent:0.3];
     
-    self.collectionView.backgroundView = backgroundImage;//[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.frame.size.width, self.collectionView.frame.size.height)];
+    self.collectionView.backgroundView = backgroundImage;
     
 }
 

@@ -37,6 +37,8 @@ typedef enum {
 @property (nonatomic) NSString* site;
 
 -(UIImage*)getIcon;
+-(NSString*)getDateString;
+-(NSString*)getTimeString;
 
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
 

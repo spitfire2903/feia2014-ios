@@ -8,11 +8,13 @@
 
 #import "CalendarViewController.h"
 
+static NSString* const CALENDAR_CELL_IDENTIFIER = @"calendarCell";
+
 @interface CalendarViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 //@property (weak, nonatomic) IBOutlet UILabel *noEventsView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) NSArray* myEvents;
+@property (nonatomic) NSDictionary* myEventsDict;
 
 @end
 
@@ -35,13 +37,12 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
-    self.myEvents = [[EventManager sharedDatabase] myEvents];
+    self.myEventsDict = [[EventManager sharedDatabase] myEventsDict];
     
     [self.tableView reloadData];
 }
@@ -52,32 +53,125 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    // TODO: verificar quais sections existem de verdade
+    return 8;
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString* sectionTitle = nil;
+    NSArray* dayEvents = nil;
+    
+    dayEvents = [self.myEventsDict objectForKey:[NSNumber numberWithInteger:section]];
+    
+    if(dayEvents != nil && [dayEvents count] > 0){
+        switch (section) {
+            case 0:
+                sectionTitle = @"21/09";
+                
+                break;
+            case 1:
+                sectionTitle = @"22/09";
+                
+                break;
+            case 2:
+                sectionTitle = @"23/09";
+                
+                break;
+            case 3:
+                sectionTitle = @"24/09";
+                
+                break;
+            case 4:
+                sectionTitle = @"25/09";
+                
+                break;
+            case 5:
+                sectionTitle = @"26/09";
+                
+                break;
+            case 6:
+                sectionTitle = @"27/09";
+                
+                break;
+            case 7:
+                sectionTitle = @"28/09";
+                
+                break;
+        }
+    }
+    
+    return sectionTitle;
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.myEvents count];
+    NSArray* eventsByDay = nil;
+    
+    eventsByDay = [self.myEventsDict objectForKey:[NSNumber numberWithInteger:section]];
+    
+    return [eventsByDay count];
 }
 
 
 #pragma mark - tableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString* eventName = nil;
+    NSString* eventTime = nil;
+    UITableViewCell *cell = nil;
+    NSArray* eventsByDay = nil;
+    Event* event = nil;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myEventsCell"];
-    
-    NSString *eventName = nil;//[[self.myEvents objectAtIndex:indexPath.row] valueForKey:@"eventId"];
-    NSNumber* eventId = [[self.myEvents objectAtIndex:indexPath.row] valueForKey:@"eventId"];
-    
-    
-    for (Event* e in [[EventManager sharedDatabase] events]) {
-        if([e.eventId intValue] == [eventId intValue]){
-            eventName = e.name;
-        }
+    cell = [tableView dequeueReusableCellWithIdentifier:CALENDAR_CELL_IDENTIFIER];
+
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CALENDAR_CELL_IDENTIFIER];
     }
     
+    eventsByDay = [self.myEventsDict objectForKey:[NSNumber numberWithInteger:indexPath.section]];
+    event = [eventsByDay objectAtIndex:indexPath.row];
+    
+    eventName = event.name;
+    eventTime = [event getTimeString];
+    
     cell.textLabel.text = eventName;
+    cell.detailTextLabel.text = eventTime;
     
     return cell;
 }
-
+/*
+-(NSArray*)eventBySection:(NSIndexPath*)indexPath{
+    NSArray* events = nil;
+    
+    switch (indexPath.section) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        case 7:
+            
+            break;
+            
+    }
+    
+    return events;
+}*/
 
 /*
 #pragma mark - Navigation

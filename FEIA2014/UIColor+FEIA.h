@@ -11,6 +11,7 @@
 @interface UIColor (FEIA)
 
 +(UIColor*)colorWithHexString:(NSString*)hex;
++(UIColor*)colorwithR:(CGFloat)red g:(CGFloat)green b:(CGFloat)blue a:(CGFloat)alpha;
 
 + (UIColor *) dancingColor;
 + (UIColor *) musicColor;

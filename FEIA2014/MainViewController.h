@@ -13,4 +13,7 @@
 
 @interface MainViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,FEIACategoryPickerDelegate>
 
+@property EventType eventType;
+@property EventCategory eventCategory;
+
 @end

@@ -47,6 +47,37 @@
     
     return icon;
 }
+-(NSString *)description{
+    return [NSString stringWithFormat:@"%@ %@ %@", self.name, [self getDateString], [self getTimeString]];
+}
+
+-(NSString*)getDateString{
+    NSString* date = nil;
+    NSDateFormatter* formatter = nil;
+    
+    if(self.date){
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd/MM"];
+        
+        date = [formatter stringFromDate:self.date];
+    }
+    
+    return date;
+}
+
+-(NSString*)getTimeString{
+    NSString* time = nil;
+    NSDateFormatter* formatter = nil;
+    
+    if(self.date){
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"HH:mm"];
+        
+        time = [formatter stringFromDate:self.date];
+    }
+    
+    return time;
+}
 
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
     Event* event = nil;

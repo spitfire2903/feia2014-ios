@@ -29,20 +29,22 @@
     //CGFloat defaultSize = [UIButton appearance].titleLabel.font.pointSize;
     
     NSDictionary* titleSettings = @{
-        UITextAttributeFont: [UIFont geosansLightWithSize:16],
-        UITextAttributeTextColor: [UIColor blackColor]
+        NSFontAttributeName: [UIFont geosansLightWithSize:18/*16*/],
+        NSForegroundColorAttributeName: [UIColor blackColor]
     };
-    NSDictionary* barButtonSettings =
-  @{
-    NSFontAttributeName: [UIFont geosansLightWithSize:14]
-                                        
-                                        };
+    
+    NSDictionary* barButtonSettings = @{
+        NSFontAttributeName: [UIFont geosansLightWithSize:16]
+    };
     
     [[UIButton appearance].titleLabel setFont:[UIFont geosansLightWithSize:15]];
     [[UILabel appearance] setFont:[UIFont geosansLightWithSize:17]];
     [[UITextField appearance] setFont:[UIFont geosansLightWithSize:14]];
     [[UINavigationBar appearance] setTitleTextAttributes:titleSettings];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateDisabled];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     
     /*[[UINavigationBar appearance] setTitleTextAttributes:
         [NSDictionary dictionaryWithObjectsAndKeys:

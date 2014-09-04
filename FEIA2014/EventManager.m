@@ -8,6 +8,11 @@
 
 #import "EventManager.h"
 
+static NSString* const CALENDAR_ENTITY = @"MyEvent";
+static NSString* const EVENT_ID_PROPERTY = @"eventId";
+static NSString* const EVENT_CATEGORY_PROPERTY = @"category";
+static NSString* const EVENT_TYPE_PROPERTY = @"type";
+
 @interface EventManager()
 
 @property (strong,nonatomic) NSMutableArray *eventList;
@@ -58,40 +63,158 @@ static EventManager *_eventManager = nil;
 
 -(NSArray *)events
 {
+    /*
+    NSPredicate* predicate = nil;
+    
+    predicate = [NSPredicate predicateWithFormat:@"%@ = %@ OR %@ = %@", EVENT_TYPE_PROPERTY, EVENT_TYPE_EXHIBITION, EVENT_TYPE_PROPERTY, EVENT_TYPE_WORKSHOP];
+    */
     return [self.eventList copy];
 }
 
 
--(NSArray *)myEvents
+-(NSDictionary *)eventsIdDict
 {
+    NSMutableDictionary* dict = nil;
+    NSArray* events = nil;
+   
+    dict = [[NSMutableDictionary alloc] init];
+    events = [self events];
     
+    for (Event* event in events) {
+        [dict setObject:event forKey:event.eventId];
+    }
+    
+    return dict;
+}
+
+-(NSDictionary *)eventsDict
+{
+    NSMutableDictionary* dict = nil;
+    NSArray* events = nil;
+    NSDateFormatter* formatter = nil;
+    NSDictionary* datesByIndexes = nil;
+    NSDictionary* indexesByDates = nil;
+    NSString* date = nil;
+    NSNumber* dictIndex = nil;
+  
+    datesByIndexes = [EventManager eventDatesByIndex];
+    indexesByDates = [EventManager indexByEventDates];
+    
+    events = [self events];
+    formatter = [[NSDateFormatter alloc] init];
+    dict = [[NSMutableDictionary alloc] init];
+    
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    
+    // Itera pelo numero de dias do feia e cria uma lista para cada
+    for(int i = 0; i < 8; i++){
+        [dict setObject:[NSMutableArray new] forKey:[NSNumber numberWithInt:i]];
+    }
+    
+    for (Event* event in events) {
+        date = [formatter stringFromDate:event.date];
+        dictIndex = [indexesByDates objectForKey:date];
+        [((NSMutableArray*)[dict objectForKey:dictIndex]) addObject:event];
+    }
+    
+    return dict;
+}
+
+-(BOOL)isEventFavorited:(NSNumber*)eventId{
+    NSArray* myEvents = nil;
+    NSPredicate* predicate = nil;
+    NSError *error = nil;
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"MyEvent" inManagedObjectContext:context ];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:CALENDAR_ENTITY inManagedObjectContext:context ];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    predicate = [NSPredicate predicateWithFormat:@"%@ = %d", EVENT_ID_PROPERTY, [eventId intValue]];
+    
+    [request setEntity:entityDescription];
+    [request setPredicate:predicate];
+
+    myEvents = [context executeFetchRequest:request error:&error];
+    
+    return ([myEvents count] > 0);
+}
+
+-(NSArray *)myEvents
+{
+    NSMutableArray* events = nil;
+    NSArray* myEvents = nil;
+    Event* event = nil;
+    NSDictionary* eventsIdDict = nil;
+    
+    eventsIdDict = [self eventsIdDict];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:CALENDAR_ENTITY inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
     [request setEntity:entityDescription];
     
     NSError *error;
     
-    return [context executeFetchRequest:request error:&error];
-    //return [self.myEventList copy];
+    events = [[NSMutableArray alloc] init];
+    myEvents = [context executeFetchRequest:request error:&error];
+
+    for (MyEvent* myEvent in myEvents) {
+        event = [eventsIdDict objectForKey:myEvent.eventId];
+        
+        [events addObject:event];
+    }
+    
+    return events;
 }
-/*
--(NSDictionary*) myEventsDict{
-    NSDictionary* events = nil;
+
+-(NSDictionary *)myEventsDict
+{
+    NSMutableDictionary* dict = nil;
+    NSArray* events = nil;
+    NSDateFormatter* formatter = nil;
+    NSDictionary* datesByIndexes = nil;
+    NSDictionary* indexesByDates = nil;
+    NSString* date = nil;
+    NSNumber* dictIndex = nil;
     
+    datesByIndexes = [EventManager eventDatesByIndex];
+    indexesByDates = [EventManager indexByEventDates];
     
-}*/
+    formatter = [[NSDateFormatter alloc] init];
+    dict = [[NSMutableDictionary alloc] init];
+    
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    
+    // Itera pelo numero de dias do feia e cria uma lista para cada
+    for(int i = 0; i < 8; i++){
+        [dict setObject:[NSMutableArray new] forKey:[NSNumber numberWithInt:i]];
+    }
+    
+    events = [self myEvents];
+    
+    for (Event* event in events) {
+        date = [formatter stringFromDate:event.date];
+        dictIndex = [indexesByDates objectForKey:date];
+        [((NSMutableArray*)[dict objectForKey:dictIndex]) addObject:event];
+    }
+
+    return dict;
+}
+
 
 #pragma mark - Private methods
 
 -(void) baseInit{
 //    NSString* name = nil;
 //    NSString* description = nil;
+    NSSortDescriptor* descriptor = nil;
     NSArray *category = @[@"Dança", @"Música", @"Artes Visuas", @"Artes Cênicas", @"Midialogia"];
     __block int eventId = 0;
     [category each:^(id object) {
@@ -118,46 +241,63 @@ static EventManager *_eventManager = nil;
         }];
     }];
     
+    [@1 upto:8 do:^(NSInteger index) {
+        
+        NSString* name = [NSString stringWithFormat:@"Noites FEIA  %d", index];
+        NSString* description = [NSString stringWithFormat:@"Noite FEIA Descrição %d", index];
+        NSDate* date = [NSDate randomDateInYearOfDate];
+        
+        [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_PARTY andCategory:0]];
+        
+        eventId++;
+    }];
+    
+    /*
     srandom(time(NULL));
     for (NSInteger x = 0; x < [self.eventList count]; x++) {
         NSInteger randInt = (random() % ([self.eventList count] - x)) + x;
         [self.eventList exchangeObjectAtIndex:x withObjectAtIndex:randInt];
-    }
-}
-
-/*
--(void)swapOutlawsAtIndex:(NSInteger)firstIndex otherIndex:(NSInteger)secondIndex
-{
-    if (firstIndex >= 0 && firstIndex < [self.outlawList count] &&
-        secondIndex >= 0 && secondIndex < [self.outlawList count]) {
-        
-        Outlaw *swapOutlaw = self.outlawList[firstIndex];
-        
-        [self.outlawList replaceObjectAtIndex:firstIndex withObject:self.outlawList[secondIndex]];
-        [self.outlawList replaceObjectAtIndex:secondIndex withObject:swapOutlaw];
-    }
-}
-
--(void)removeOutlawAtIndex:(NSInteger)index
-{
-    if (index >= 0 && index < [self.outlawList count])
-    {
-        [self.outlawList removeObjectAtIndex:index];
-    }
+    }*/
     
+    descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    [self.eventList sortUsingDescriptors:@[descriptor]];
+    
+    NSLog(@"%@", self.eventList);
 }
 
--(void)removeOutlaw:(Outlaw*)outlaw
-{
-    [self.outlawList removeObject:outlaw];
++(NSDictionary*)eventDatesByIndex{
+    NSDictionary* dates = nil;
+    
+    dates = @{
+        [NSNumber numberWithInt:0]:@"21/09/2014",
+        [NSNumber numberWithInt:1]:@"22/09/2014",
+        [NSNumber numberWithInt:2]:@"23/09/2014",
+        [NSNumber numberWithInt:3]:@"24/09/2014",
+        [NSNumber numberWithInt:4]:@"25/09/2014",
+        [NSNumber numberWithInt:5]:@"26/09/2014",
+        [NSNumber numberWithInt:6]:@"27/09/2014",
+        [NSNumber numberWithInt:7]:@"28/09/2014"
+        };
+    
+    return dates;
 }
 
-#pragma mark - Auxiliary methods
 
--(void)addOutlaw:(Outlaw *)outlaw;
-{
-    [self.outlawList addObject:outlaw];
++(NSDictionary*)indexByEventDates{
+    NSDictionary* dates = nil;
+    
+    dates = @{
+        @"21/09/2014":[NSNumber numberWithInt:0],
+        @"22/09/2014":[NSNumber numberWithInt:1],
+        @"23/09/2014":[NSNumber numberWithInt:2],
+        @"24/09/2014":[NSNumber numberWithInt:3],
+        @"25/09/2014":[NSNumber numberWithInt:4],
+        @"26/09/2014":[NSNumber numberWithInt:5],
+        @"27/09/2014":[NSNumber numberWithInt:6],
+        @"28/09/2014":[NSNumber numberWithInt:7]
+        };
+    
+    return dates;
 }
-*/
 
 @end

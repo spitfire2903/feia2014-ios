@@ -58,6 +58,18 @@
                            alpha:1.0f];
 }
 
++(UIColor*)colorwithR:(CGFloat)red g:(CGFloat)green b:(CGFloat)blue a:(CGFloat)alpha{
+    CGFloat r = 0;
+    CGFloat g = 0;
+    CGFloat b = 0;
+    
+    r = red/255;
+    g = green/255;
+    b = blue/255;
+    
+    return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
+}
+
 + (UIColor *) dancingColor{
     return [self colorWithHexString:@"ED2459"];
     //return [self colorWithHexString:@"#d73027"];
