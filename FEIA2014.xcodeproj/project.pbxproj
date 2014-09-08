@@ -34,6 +34,7 @@
 		20E3F07D199B02EB00BA1CA8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F07C199B02EB00BA1CA8 /* MapViewController.m */; };
 		20E3F080199B02F200BA1CA8 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F07F199B02F200BA1CA8 /* ContactViewController.m */; };
 		20E3F083199B035100BA1CA8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F082199B035100BA1CA8 /* BaseTableViewController.m */; };
+		70B71D1D19BE024700988E0E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 70B71D1C19BE024700988E0E /* events.json */; };
 		70D3FE53199A534F009DB094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE52199A534F009DB094 /* Foundation.framework */; };
 		70D3FE55199A534F009DB094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE54199A534F009DB094 /* CoreGraphics.framework */; };
 		70D3FE57199A534F009DB094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE56199A534F009DB094 /* UIKit.framework */; };
@@ -121,6 +122,7 @@
 		20E3F081199B035100BA1CA8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		20E3F082199B035100BA1CA8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		42F3966719BE4B19B3D03B47 /* libPods-FEIA2014.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FEIA2014.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B71D1C19BE024700988E0E /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = events.json; path = Resources/events.json; sourceTree = "<group>"; };
 		70D3FE4F199A534F009DB094 /* FEIA2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FEIA2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D3FE52199A534F009DB094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70D3FE54199A534F009DB094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,6 +199,7 @@
 		201B34AD19B6C6E80081CC1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70B71D1C19BE024700988E0E /* events.json */,
 				201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */,
 				201B34AF19B6C8830081CC1C /* GeosansLight.ttf */,
 				20458F2119B7C66E00E65EFE /* eventos.txt */,
@@ -441,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B71D1D19BE024700988E0E /* events.json in Resources */,
 				20458F2319B7C8F800E65EFE /* GeosansLight-Oblique.ttf in Resources */,
 				70D3FE5F199A534F009DB094 /* InfoPlist.strings in Resources */,
 				70D3FE6A199A534F009DB094 /* Images.xcassets in Resources */,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ybd-Gd-LIv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ybd-Gd-LIv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Slide Menu Root View Controller-->
@@ -109,7 +109,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RZM-a9-33p"/>
-                    <size key="freeformSize" width="300" height="600"/>
                     <connections>
                         <segue destination="N47-y6-G8b" kind="custom" identifier="calendarSegue" customClass="SASlideMenuContentSegue" id="Lnr-PI-XVa"/>
                         <segue destination="Ksy-83-1jj" kind="custom" identifier="mapSegue" customClass="SASlideMenuContentSegue" id="c6X-JK-tzj"/>
@@ -556,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="2934" y="933"/>
         </scene>
-        <!--Workshop View Controller-->
+        <!--Workshop View Controller - Oficinas-->
         <scene sceneID="ROr-KY-ePi">
             <objects>
                 <viewController id="Qe7-RA-oh2" customClass="WorkshopViewController" sceneMemberID="viewController">
@@ -570,7 +569,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="thC-No-eMX"/>
+                    <navigationItem key="navigationItem" title="Oficinas" id="thC-No-eMX"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOI-gK-pAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,7 +613,7 @@
                                 <rect key="frame" x="20" y="84" width="984" height="664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="iRh-gs-gVH" userLabel="Parceiros">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="500" translatesAutoresizingMaskIntoConstraints="NO" id="iRh-gs-gVH" userLabel="Parceiros">
                                         <rect key="frame" x="242" y="20" width="500" height="467"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -630,7 +629,7 @@ Onde: Av Érico Verissimo esquina com R. Pitagoras (Unicamp) Período: Almoç
 O que pedir: Almoço FEIA 
 Borda Brasil
 Onde: R. Ângela Signori Grigol 243 Período: Jantar de 20-26/setembro O que pedir: Pizza Brotinho</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
