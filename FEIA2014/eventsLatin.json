@@ -1,0 +1,494 @@
+{
+    "events":[
+              {
+              "eventId": 1,
+              "name": "OFICINA DE INICIAÇÃO À ESCRITA DRAMATÚRGICA",
+              "type": 0,
+              "category": 3,
+              "date": "",
+              "shortDescription":"Ministrante: Camila Damasceno Silva\nSinopse: Oficina teórico-prática de iniciação à escrita dramatúrgica com finalidade de incentivar a prática da escrita de textos teatrais para atuantes das artes e público geral.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 2,
+              "name": "Caminhos para Shakespeare",
+              "type": 0,
+              "category": 3,
+              "date": "",
+              "shortDescription": "Ministrante: Andrea Weber\nSinopse: Como abordar uma obra de Shakespeare? São vários os caminhos possíveis para o entendimento e principalmente para dar vida à sua obra, são esses caminhos que iremos explorar nesta oficina através de jogos teatrais, improvisações e os textos \"Ricardo III\" e \"Macbeth\".",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 3,
+              "name": "Máscaras Larvárias - Potência cênica através da forma",
+              "type": 0,
+              "category": 3,
+              "date": "",
+              "shortDescription": "Ministrante: Winston Kurtz\nSinopse: Na pedagogia da máscara teatral, algumas vezes, dentro desta ?jornada”, as máscaras larvárias são esquecidas ou mesmo ignoradas. O certo é que entre a neutra e as expressivas (Commedia Dell’arte, por exemplo ) existe um mundo a parte. O workshop: MÁSCARAS LARVÁRIAS: A POTÊNCIA CÊNICA ATRAVÉS DAS FORMAS oferece aos participantes a oportunidade de tomar conhecimento das potencialidades do corpo, de conhecimento um universo pré-expressivo e explorar seus sentidos em busca de um jogo cênico corporal mais apurado.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 4,
+              "name": "Corpo em Ventania",
+              "type": 0,
+              "category": 3,
+              "date": "",
+              "shortDescription": "Ministrante: Pietro Almeida\nSinopse: A oficina Corpo em Ventania integrou a banda instrumental Assopro iniciando um laboratório sonoro-corporal que se propõe a introduzir e vivenciar o trabalho físico e expressivo do participante a partir de princípios da Técnica Alexander, Bioenergética, Máscara Neutra e do Teatro físico. Durante a oficina a banda Assopro estará instigando os participantes com improvisos e experimentações sonoras baseado em seu repertório de música instrumental e improvisações sintonizadas com os exercícios do grupo.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 5,
+              "name": "Os Incompreendidos: uma investigação cine-teatral",
+              "type": 0,
+              "category": 3,
+              "date": "",
+              "shortDescription": "Ministrante: Vivian Cristina Cardozo Razera\nSinopse: A oficina \"Os incompreendidos: uma investigação cine teatral\" pretende realizar uma investigação artística sobre o filme \"Os Incompreendidos\" de François Truffaut (1959). Ao final da oficina faremos um vídeo documentário sobre o trabalho realizado.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 6,
+              "name": "Cinema e Literatura em Moçambique: Uma breve introdução",
+              "type": 0,
+              "category": 5,
+              "date": "",
+              "shortDescription": "Ministrante: Natasha Magno Francisco Dos Santos\nSinopse: A oficina visa promover uma breve introdução sobre a literatura moçambicana e sobre a sua produção cinematográfica. Com a Lei 10.639/03, que determina o ensino da História e da Cultura Afro-Brasileira em todo o currículo escolar, torna pertinente o ensino das Literaturas Africanas de Língua Portuguesa. Entretanto, há uma carência de informações por parte dos professores e do público em geral que encontram dificuldades em trabalhar com essa temática devido à falta de material didático-pedagógico e/ou até por desconhecimento. Por isso, proponho uma oficina para discutirmos aspectos fundamentais das literaturas e do cinema em Moçambique. Abordaremos momentos significativos na poesia e na prosa, enfatizando a interdisciplinaridade da Literatura com as Artes Plásticas, com a História e com o próprio cinema.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 7,
+              "name": "Operações Coletivas – O Corpo em Massa",
+              "type": 0,
+              "category": 5,
+              "date": "",
+              "shortDescription": "Ministrante: Chico Lima\nSinopse: A oficina \"Operações Coletivas - O Corpo em Massa\" explora as relações de alteridade, interconexão, coreografia e afetação dos indivíduos de um grupo, através do compartilhamento e da experimentação de exercícios coletivos de criação, percepção, e da construção de um corpo (individual e coletivo) poroso, consciente de sua constante transformação.",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 8,
+              "name": "Automaquiagem",
+              "type": 0,
+              "category": 5,
+              "date": "22/09/2014 09:00",
+              "shortDescription": "Ministrante: Gabriela Shembeck\nSinopse: Oficina destinada para todos e todas que querem aprender dicas práticas para uma boa maquiagem do dia-a-dia. Com as dicas de aplicação que você terá, vai sair da oficina pronta pra arrasar.\nHorário: 9h-12h",
+              "placeData": "AD05",
+              "site": ""
+              },
+              {
+              "eventId": 9,
+              "name": "Maquiagem Drag Queen",
+              "type": 0,
+              "category": 5,
+              "date": "23/09/2014 09:00",
+              "shortDescription": "Ministrante: Gabriela Shembeck \nSinopse: Oficina destinada a todos com interesse no estilo específico da maquiagem Drag Queen. \n Homens e Mulheres podem participar.\nHorário: 9h-12h",
+              "placeData": "AD05",
+              "site": ""
+              },
+              {
+              "eventId": 10,
+              "name": "Drag 101",
+              "type": 0,
+              "category": 5,
+              "date": "25/09/2014 09:00",
+              "shortDescription": "Ministrante: Luís Henrique Lopes\nSinopse: Uma troca de conhecimentos do universo drag, tanto de montagem quanto apresentação. É aberto a todos indivíduos interessados, sem discriminação de gênero. Traga sua make, peruca e salto e vamo embora menine!\nHorário: 9h-12h",
+              "placeData": "AD04",
+              "site": ""
+              },
+              {
+              "eventId": 11,
+              "name": "Pixie-Dança",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Marina Teixeira Kerber\nSinopse: Faça o corpo humano dançar em movimentos impossíveis através da animação pixilation. Nessa oficina realizaremos uma videodança através da técnica de pixilation compreendendo seus princípios básicos e desdobramentos possíveis em obras audiovisuais.\nQuando: terça, quarta e quinta, das 9 as 12h.\n Salas: Noya (terça), AD02(quarta) , MM02(quinta)",
+              "placeData": "",
+              "site": ""
+              },
+              {
+              "eventId": 12,
+              "name": "Narrativa Transmídia",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Gabriel Ishida\nSinopse: Sendo ministrada no FEIA desde 2011, a oficina de Narrativa Transmídia aborda os principais conceitos envolvendo transmídia, realizando uma análise histórica dentro da comunicação multiplataforma, desdobramento dos conceitos, exposição de cases e uma aplicação prática.\nQuando: quinta, as 9 as 12h.",
+              "placeData": "MM01",
+              "site": ""
+              },
+              {
+              "eventId": 13,
+              "name": "Técnicas de colorização e pintura digital no Photoshop",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Rafael Ghiraldelli da Silva\nSinopse: Aula-demonstração que pretende detalhar o workflow do ministrante ao realizar a arte-final e colorização de um rascunho seu feito a lápis através do programa Adobe Photoshop. Serão indicados atalhos, ferramentas, recursos e outras estratégias de otimização de tempo, além de conceitos relacionados tanto a técnicas de pintura tradicional e sistemas de cores reconhecidos pelo computador (RGB, CMYK, etc.) visando à criação de uma ilustração digital.\nQuando: Sexta, as 9 as 12h.\n Observações: Participantes podem levar seus computadores com Photoshop instalado para acompanhar as instruções do ministrante.",
+              "placeData": "MM01",
+              "site": ""
+              },
+              {
+              "eventId": 14,
+              "name": "Eu meio: experiências com mediação cultural",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Isabela Maia e Rosi Ludwig\nSinopse: Bate-papo sobre mediação cultural em instituições e museus, com trocas de experiências e de material sobre as visitas chamadas educativas e sobre o trabalho do mediador. \nQuando: Segunda, as 9 as 12h.",
+              "placeData": "MM02",
+              "site": ""
+              },
+              {
+              "eventId": 15,
+              "name": "Glitch e Apropriação Audio/Visual: processos criativos em tecnologias digitais",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Rodrigo Faustini dos Santos\nSinopse: A oficina pretende debater a 'Glitch art' - uso 'incorreto' da tecnologia para fins estéticos, traçando um pequeno histórico de experimentações relevantes no campo da arte até sua consolidação recente na esfera da cultura pop. No âmbito prático, serão apresentados métodos de corrupção de dados digitais, gerando um debate sobre os limites do conceito de Glitch, visando esboçar uma proposta de interação decodificadora com a tecnologia.\nQuando: terça, as 9 as 12h.",
+              "placeData": "MM02",
+              "site": ""
+              },
+              {
+              "eventId": 16,
+              "name": "Entendendo Conceitos Técnicos da Imagem Digital",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Felipe Orsini Martinelli\nSinopse: Oficina teórica sobre conceitos presentes no campo da imagem digital que, muitas vezes, aparecem no nosso dia a dia e não entendemos muito bem como funcionam, ou só dizemos que entendemos para fugir de explicações chatas (porque é muito chato entender histograma, é só ir lá no programa e ficar mudando até a foto ficar boa). Pretende-se explicar de maneira simples, clara e através de vários exemplos, conceitos como histograma, pixel interpolado e pixel efetivo, diferença entre vetor e mapa de bits, formatos para imagem, contraste, saturação, level e outros.\nQuando: quarta, as 9 as 12h.",
+              "placeData": "MM02",
+              "site": ""
+              },
+              {
+              "eventId": 17,
+              "name": "Introdução a Jogos no Processing",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Felipe Orsini Martinelli\nSinopse: O que? Processing? Mas dá pra fazer jogo? A resposta é sim! Nesta oficina vamos ver uma introdução de programação em jogos nesse programa open source e elementos fundamentais de game design para um jogo ser um jogo!\nQuando: quinta, as 9 as 12h.",
+              "placeData": "Noya",
+              "site": ""
+              },
+              {
+              "eventId": 18,
+              "name": "A Percepção e a Linguagem Visual no Design Gráfico",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Matheus Schmidt\nSinopse: A linguagem visual é uma importante ferramenta para aqueles interessados em comunicação através de imagem. A seguinte palestra se propõe a apresentar a percepção visual, de um ponto de vista humano e neurológico, bem como apresentar uma teoria consciente da liguagem visual. Pretende também expor, de maneira breve, uma trajetória histórica do design e da comunicação visual. \nQuando: Segunda, as 9 as 12h.",
+              "placeData": "Noya",
+              "site": ""
+              },
+              {
+              "eventId": 19,
+              "name": "Programas para Animação digital 2d: Uma visão geral",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Thais Uzan\nSinopse: A animação 2d hoje em dia pode ser totalmente digital. Muitos programas estão disponíveis na internet, com funções, acessibilidade e workflows bem diferentes, voltados muitas vezes para estilos de animação específicos. Essa palestra propõe dar uma visão geral ao animador ou interessado dessas ferramentas que estão disponíveis, como funcionam e como podem ser utilizadas da melhor forma nas diferentes etapas de uma animação.\nQuando: sexta, as 9 as 12h.",
+              "placeData": "Noya",
+              "site": ""
+              },
+              {
+              "eventId": 20,
+              "name": "Nus que aqui estamos, por vós esperamos",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Nubia Abe e Mateus Lima (coletivo Além)\nSinopse: A oficina é composta de bate-papo e vivência-ensaio. O bate-papo aborda a temática da nudez, e como construir uma produção artística que reforçe a sua naturalização, e não estereótipos sexuais e padrões de beleza. Após o bate-papo será realizada uma vivência-ensaio de nudez coletiva, com produção fotográfica. A etapa da vivência ocorrerá com os participantes que se sentirem à vontade, sendo possível participar apenas da etapa do bate-papo caso nem todos queiram ficar nus e/ou serem fotografados. Procuramos desconstruir os tabus relacionados à nudez através de vivências coletivas em situações confortáveis como dentro de casa ou em meio à natureza. Estar nu faz a gente lembrar que é animal, e faz as coisas construídas perderem um pouco o sentido. Estar nu em uma vivência coletiva, enquanto um processo de naturalização e livre criação, nos faz perceber a nudez de forma dessexualizada, de simplesmente ser o que se é sem máscaras - a roupa é a máscara com a qual vestimos o corpo - e nos remete às nossas origens, nos aproxima dos instintos, de tudo aquilo que não passa pelo crivo da razão, e isso nos faz nos entender melhor. É uma forma de terapia, pois pode proporcionar um aumento da auto-estima e uma desconstrução dos bloqueios relacionados ao próprio corpo. É um excelente exercício de aceitação de si, de libertação. Estar nu é despir-se de muito mais do que um pedaço de pano. É despir-se de uma complexa construção social emaranhada desde as suas raízes. É enxergar o fundamental, é se aproximar do essencial. Estar nu é estar desprotegido. É estar livre. É não ter medo. É um gesto de resistência. O Coletivo Além é um coletivo de arte político-poética que busca romper tabus e combater as diversas formas de opressão. Nesse contexto, desenvolvemos projetos como o \"Pelos Pelos\" (ensaios nus de mulheres que não se depilam e homens peludos), \"Além do Gênero\" (retratos de pessoas transexuais e travestis com a proposta de buscar o empoderamento através da naturalização da questão), \"Além do Sexo\" (arte erótica que retrata o sexo por diferentes perspectivas, em contraposição à atual indústria pornográfica machista dominante), entre outros. Para conhecer nosso trabalho: www.alem.art.br\n\nNão serão permitidas outras câmeras fotográficas durante o ensaio.\nQuando: Quarta, das 9 as 12",
+              "placeData": "AP07",
+              "site": ""
+              },
+              {
+              "eventId": 21,
+              "name": "Direção de Arte",
+              "type": 0,
+              "category": 4,
+              "date": "",
+              "shortDescription": "Ministrantes: Roberto Eiti Hukai\nSinopse: A Direção de Arte é uma área essencial do fazer audiovisual e, em colaboração com a Direção e a Direção de Fotografia, participa da transformação do roteiro em imagem. É uma área do saber localizada na intersecção entre as escolas de Audiovisual, Artes Plásticas e Arquitetura. Tomando como base a experiência pessoal de elaboração e realização da direção de arte do filme de longa-metragem \"Corpo\" lançado em 2008, vamos abordar vários aspectos do campo da Direção de Arte em Cinema.\nQuando: terça, das 9 as 11",
+              "placeData": "MM01",
+              "site": ""
+              },
+              {
+              "eventId": 22,
+              "name": "Cianoficina",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Maria Vitória Ferreira\nSinopse: A oficina mostra como é feito o método de impressão da cianotipia muito usada na fotografia no século XIX por meio de dois químicos que misturados e expostos ao sol formam a cor ciano. Como é um processo que permite muitas experimentações no campo artístico, a oficina trabalha em cima disso por  ir além da simples representação fotográfica e trazer mais uma alternativa de impressão.\nQuando: Segunda (Gravura)\nHorário: 9h-12h",
+              "placeData": "Gravura",
+              "site": ""
+              },
+              {
+              "eventId": 23,
+              "name": "Desenho de Figurino",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Aline Barbosa\nSinopse: Teoria de como fazer um bom desenho de figurino que mostre todos os detalhes conceituais (para o diretor) e de estrutura da roupa (para uma costureira), além de uma série de exercícios para produzir esses desenhos.\nQuando: Quarta\nHorário: 9h-12h",
+              "placeData": "Oficina",
+              "site": ""
+              },
+              {
+              "eventId": 24,
+              "name": "Fotografia Expandida",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Patrícia Alessandri\nSinopse: A oficina de fotografia expandida tem por objetivo estabelecer parâmetros relativos à história da fotografia, desde seus objetivos inaugurais, que pressupunham o registro da realidade, passando por inovações importantes na linguagem até o período contemporâneo, em que a fotografia amplia seu campo de atuação relacionando diferentes linguagens em seu fazer artístico.\nQuando: Terça, quarta, quinta e sexta\nHorário: 9h-12h",
+              "placeData": "AP04",
+              "site": ""
+              },
+              {
+              "eventId": 25,
+              "name": "Sobre livro-objeto",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Serena Labate\nSinopse: A oficina tem como motivo a discussão sobre livros-objetos. Visa a ampliação de repertório por referências de trabalhos de artistas e proposta de uma experiência prática para exercício do fazer artístico ligado à criação de livros-objetos.\nQuando: Segunda\nHorário: 9h12h",
+              "placeData": "AP10",
+              "site": ""
+              },
+              {
+              "eventId": 26,
+              "name": "Vídeo Projeção Mapeada / Edição de Vídeo em Tempo Real",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Karina Montenegro\nSinopse: A oficina de videomapping aborda teoria e experimentação prática de projeção de vídeo em tempo real mapeada, em formas complexas,  envolvendo todo o processo, desde o momento da escolha do melhor aparato tecnológico, até a realização de testes com conteúdos bi e tridimensionais.\n Serão apresentadas diferentes ferramentas de projeção de video em tempo real que roda nas plataformas Mac e Windows, como Modul8, MadMapper, Resolume e VPT.\n O micro mapping possibilita que os alunos tenham um contato mais direto com o mapeamento com custos muito mais acessiveis.\nQuando: Quarta, quinta e sexta\nHorário: 8h-12h",
+              "placeData": "AP10",
+              "site": ""
+              },
+              {
+              "eventId": 27,
+              "name": "Desenho de modelo vivo: moda Lolita",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Rodrigo\nSinopse: A oficina propõe uma imersão no universo da moda Lolita através da observação de modelos vestidas com roupas características desse estilo. Os participantes podem desenvolver o desenho de observação do corpo e de figurino, ou criar a sua própria narrativa através dos estímulos criados pela vestimenta e pela musica que acompanhará as modelos.\nQuando: Segunda\nHorário: 10h-12h",
+              "placeData": "AP11",
+              "site": ""
+              },
+              {
+              "eventId": 28,
+              "name": "Stencil com o mapa da Unicamp",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Guilherme Fischer\nSinopse: Cada participante elaborará um mapa da Unicamp, tendo em mente os trajetos que costumar realizar em seus afazeres acadêmicos. Cada participante será convidado a transformar seu mapa em um molde de stencil. Cada um terá um espaço designado em uma parede do ateliê da Moras para pintá-los.\nQuando: Terça\nHorário: 9h-12h",
+              "placeData": "Moradia",
+              "site": ""
+              },
+              {
+              "eventId": 29,
+              "name": "Light Painting - novas dimensões da fotografia digital",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Isabela Vida Moreno\nSinopse: Durante a oficina de Light Painting, os participantes serão estimulados a produzir fotografias com suas próprias câmeras ou celulares incluindo duas câmeras semiprofissionais que serão emprestadas e utilizadas coletivamente durante a oficina, explorando as novas possibilidades da imagem digital e os recursos dos equipamentos para criar imagens a partir de uma fonte de luz. Os participantes receberão orientação para suas produções individuais e/ou em grupo.\nQuando: Sexta\nHorário: 9h-12h",
+              "placeData": "Estúdio",
+              "site": ""
+              },
+              {
+              "eventId": 30,
+              "name": "História em quadrinhos: da ideia à publicação",
+              "type": 0,
+              "category": 2,
+              "date": "",
+              "shortDescription": "Ministrante: Mario Cau\nSinopse: As HQs são uma das mais poderosas formas de comunicação,entretenimento e expressão. Mas como começar a contar uma história? Uma conversa sobre processos criativos, experimentação, narrativa, linguagem e o mercado atual de HQ no Brasil. Da concepção às possibilidades para publicação de uma obra de Quadrinhos, e onde se encaixa o autor - e a arte - no meio disso tudo.\nQuando: Quarta\nHorário: 10h-12h",
+              "placeData": "Estúdio",
+              "site": ""
+              },
+              {
+              "eventId": 31,
+              "name": "Violão de Sete Cordas: técnica e estilo",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Guilherme Lamas\nSinopse: Despertar no aluno, o interesse pelo aprendizado, integração na sociedade e estímulo a concentração através do estudo do Violão de 7 Cordas.\nQuando: Quarta\nHorário: 9h-12h",
+              "placeData": "MU22",
+              "site": ""
+              },
+              {
+              "eventId": 32,
+              "name": "Laboratório de Composição para Não-Músicos",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Lucas Rodrigues Ferreira\nSinopse: Nesta oficina de dois dias de duração será criado um laboratório de composição a partir de técnicas que prescindem de conhecimento prévio da teoria e da notação musicais tradicionais. Serão discutidas partituras gráficas, partituras de livre interpretação e músicas que utilizam a livre improvisação como possibilidade no seu vocabulário. A partir das estratégias de composição conferidas nestas músicas, os participantes proporão ideias de músicas, e munidos de lápis, folhas A3 e réguas, as executarão em suporte. O segundo dia da oficina será um ensaio aberto ao público, contando com músicos do Ensemble FEIA para executarem as peças compostas durante a oficina, e criando-se espaço para a discussão entre participantes, executantes e público.\nQuando: Segunda e Terça\nHorário: 9h – 12h",
+              "placeData": "MU22",
+              "site": ""
+              },
+              {
+              "eventId": 33,
+              "name": "Improvisação com uso de acordes (chord melody) no violão e na guitarra.",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Victor Rocha Polo\nSinopse: A improvisação, na guitarra e violão, com o uso de acordes (chord melody) faz parte do vocabulário musical de grandes mestres do instrumento, a exemplo de Joe Pass e Toninho Horta. Essa oficina visa apresentar e explicar alguns procedimentos e técnicas usados nesse tipo improvisação, além de promover discussões e troca de conhecimento entre guitarristas e violonistas interessados nesse assunto.\nQuando: Segunda\nHorário: 9h – 12h",
+              "placeData": "MU05",
+              "site": ""
+              },
+              {
+              "eventId": 34,
+              "name": "Respiração, exercícios vocais no Canto Popular/Erudito e Bem estar vocal",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Ana Terra Pompeu\nSinopse : O curso visa ampliar e aprofundar os conhecimentos sobre o uso do apoio respiratório no ato de cantar de acordo com a anatomia/fisiologia. Traz também aspectos relacionados aos exercícios vocais mais comuns, buscando um olhar mais apurado sobre a maneira como eles tem sido realizados. E por fim, aborda mitos e verdades sobre o bem estar vocal (saúde vocal).\nQuando: Segunda-feira\nHorário: 9h – 12h",
+              "placeData": "MU04",
+              "site": ""
+              },
+              {
+              "eventId": 35,
+              "name": "Exercícios em Prática de Conjunto",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Gustavo de Medeiros Santos\nSinopse: Oficina de prática de conjunto que expõe exercícios musicais com intuito de aperfeiçoar o entrosamento em grupo, fortalecendo o tempo interior dos integrantes. Práticas em compassos ímpares, modulação métrica, abordagem de diferentes formas de improviso. Ministrada pelo Trio Pau de Arara (Gustavo de Medeiros, João Casimiro e Ramon Del Pino).\nQuando: Quarta\nHorário: 8h – 12h",
+              "placeData": "MU35",
+              "site": ""
+              },
+              {
+              "eventId": 36,
+              "name": "Oficina de Música Improvisada com o Grupo Obra Aberta",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Henrique Cantalogo Couto\nSinopse: A oficina propõe aos participantes uma imersão no campo da música improvisada, através de discussões e atividades práticas, com o objetivo de realizar um projeto musical coletivo (Grupo Obra Aberta e alunos) a ser apresentado ao público.\n A ideia de promover uma oficina desse tipo justifica-se pelo caráter experimental e original da proposta, poucas vezes contemplada em festivais de música no Brasil. Acredita-se que a oficina possibilitará aos alunos uma visão privilegiada, tanto teórica quanto praticamente, de processos criativos na área da música contemporânea experimental.\nQuando: Segunda, Terça e Quarta\nHorário: 9h – 12h\n Observação: Apresentação de finalização da oficina - Auditório do Instituto de Artes, Quarta das 20h as 22h.",
+              "placeData": "MU22",
+              "site": ""
+              },
+              {
+              "eventId": 37,
+              "name": "Música de Camara para Violão: Práticas e Metodologias na Educação Musical e Performance",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Helder Tomas Pinheiro / Ricardo Henrique Serrão\nSinopse: O objetivo da oficina é oferecer um panorama histórico do violão nas práticas camaristicas partindo da música do séc. XVI ao séc. XXI, demonstrando a importância que o instrumento ganhou, na medida em que a exploração tímbrica e a hibridização de técnicas e linguagens foram crescendo ao decorrer do desenvolvimento do instrumento.\n A partir desse panorama, será investigado o repertório camaristico do violão em suas diversas formações, buscando destacar o seu desenvolvimento idiomático, bem como divulgar e explorar o amplo repertório existente através da leitura/escuta da literatura.\n Por fim, serão abordados processos metodológicos e práticas de ensino destacando os materiais didáticos e os trabalhos de pesquisas recentes que exploram o ensino do violão em formações camaristicas.\nQuando: Terça e Quarta\nHorário: 9h – 12h",
+              "placeData": "MU05",
+              "site": ""
+              },
+              {
+              "eventId": 38,
+              "name": "Dicen que el mundo es redondo – ouvir, vibrar e cantar coplas",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Nina Neder\nSinopse: As coplas são poemas breves dotados de poderosa síntese. São versos anônimos e ancestrais \"que o povoado soprou na sede de muitas gargantas, foi por todas elas amaciado, servindo à emoção de umas quantas almas\". Onde estão esses versos? Que dizem? Como dizem? Existem gêneros musicais argentinos cuja estrutura, tronco e alma vivem na copla. Na oficinina, vamos conhecer esse canto ouvindo-o e buscando dentro. Através do reconhecimento auditivo e da prática de coplear, iremos ao encontro dessa paisagem sonora, das cores vocais e dos dizeres a que se presta sua entoação agreste. \"Cantar não é controlar um caudal aéreo. É algo profundo e subterrâneo. Cair em concavidades desconhecidas e voltar à superfície com fogos e metais, picos e planícies, seivas e areias. Quando o canto perde rugidos e lamentos, magia e sabedoria ancestral, a voz se descoloca.\" Leda Valladares\nQuando: Terça e Quarta\nHorário: 9h – 12h",
+              "placeData": "MU04",
+              "site": ""
+              },
+              {
+              "eventId": 39,
+              "name": "Oficina de produção musical – Echos Produções",
+              "type": 0,
+              "category": 1,
+              "date": "",
+              "shortDescription": "Ministrante: Victor Oliveira\nSinopse: a ideia aqui é promover noções essenciais de prática de estúdio, principalmente do ponto de vista da captação, para obtenção de resultados semi-profissionais com limitações de estrutura, tanto de equipamento, quanto de espaço. \nQuando: Quinta e Sexta\nHorário: 9h-12h",
+              "placeData": "Echos Studio Bar",
+              "site": ""
+              },
+              {
+              "eventId": 40,
+              "name": "Performance - Il training di Grotowski",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Thamyris Monteiro Felipe\nSinopse: Vivência no trabalho corporal elaborado por Jerzy Grotowski.\nQuando: Segunda 22/09 \nHorário: 9h-12h",
+              "placeData": "AD04",
+              "site": ""
+              },
+              {
+              "eventId": 41,
+              "name": "Laboratório de Dramaturgias",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Gisela Dória\nSinopse: O workshop teórico-prático propõe através de uma breve revisão histórica, com referências teóricas e audiovisuais, uma reflexão sobre as tensões entre o teatro e a dança. Tal reflexão será desdobrada através de experiências práticas que envolverão várias noções de dramaturgia(s).\nQuando: Terça 23, Quarta 24 e Quinta 25\nHorário: 9h-12h",
+              "placeData": "AD01",
+              "site": ""
+              },
+              {
+              "eventId": 42,
+              "name": "Diva Class",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Jun Hosotani\nSinopse: DIVA CLASS é uma mistura de elementos de diferentes estilos de dança vivenciados por mim: Jazz, Funk, Hip-Hop, African Dance, Stiletto; além dos híbridos Jazz-Funk, Street-Jazz e Girls Hip-Hop.\n Ao som das Divas que compõem o cenário da música pop atual, calçamos nossos saltos e nos tornamos ainda mais poderosas.\n Que batamos nossos cabelos, que trinquemos nossos saltos, que sejamos divinxs e fabulosxs, que sambemos na cara da sociedade: põe mais glitter, pluma e paetê! E principalmente, que sejamos quem somos, movidxs por nossos anseios, desejos e paixões, sem medo de julgamentos e moralismos.\nQuando: Terça 23\nHorário: 9h-12h",
+              "placeData": "AD04",
+              "site": ""
+              },
+              {
+              "eventId": 43,
+              "name": "Afrikanizar",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Jun Hosotani\nSinopse: Afrikanizar!!!\n Movido por pulsações e ritmos de tambores, o oficineiro pretende compartilhar sua dança munida de pés descalços e balanço nos quadris, vibrações no peito e ondulações na coluna.\n\n Buscando em sua história e vivência, danças por quais se apaixonou, encontrou nas danças de origem africana, a maneira de ser e estar, de expressar-se em sua arte e paixão.\n Afrikanizar é uma oficina que mistura matrizes de movimento de danças afro-brasileiras, afro-americanas e dança africana da costa oeste.\n\n Para trazer o corpo à africanidade desejada, implementou à aula, sua crença nas energias dos 4 elementos: fogo, água, terra e ar; sendo cada elemento trabalhado em determinado momento.Além de trabalhar matrizes dessas danças, um espaço da aula será reservado para a criação de cada participante, que deixará o corpo extravasar seus fluxos em movimentos únicos.\nQuando: Quarta 24 \nHorário: 9h-12h",
+              "placeData": "AD04",
+              "site": ""
+              },
+              {
+              "eventId": 44,
+              "name": "Transeuntes",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Maitê Neris de Lacerda Soares \nSinopse: O grupo Transeuntes traz ao FEIA uma proposta de criação e exploração em espaços alternativos em dança. Separada em dois momentos/situações, a oficina abarcará a prática de exercícios de criação e uma apresentação colaborativa resultante da co-criação de participantes e proponentes.\nQuando: Quarta 24, quinta 25 e sexta 26 \nHorário: 9h-12h",
+              "placeData": "AD05",
+              "site": ""
+              },
+              {
+              "eventId": 45,
+              "name": "JAM para se encontrar",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Angélica Duarte Topfstedt\nSinopse: JAM feita para quem quiser experimentar dança e desenho vivenciar  tudo junto em um mesmo ambiente. Tragam seus materiais  (pincéis, tintas, músicas em mídia digital (pen drive), tecidos, fios, argila, crochet, etc) e seus corpinhos com roupas confortáveis.\nQuando: Quarta 24 \nHorário: 9h-12h",
+              "placeData": "AC01",
+              "site": ""
+              },
+              {
+              "eventId": 46,
+              "name": "Improvisação e Criação em Dança",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Juliana Cunha Passos \nSinopse: Nesta oficina serão abordados alguns aspectos de métodos didáticos de Rolf Gelewski que abordam o conceito de improvisação estruturada como uma forma de desenvolver os aspectos criativos e expressivos do artista, além de trabalhar as possibilidades de relação entre dança, música e desenho.\nQuando: Quinta 25 e sexta 26 \nHorário: 9h-12h",
+              "placeData": "AC01",
+              "site": ""
+              },
+              {
+              "eventId": 47,
+              "name": "A Máscara Neutra e a Dança",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Nathan Ranhel \nSinopse: Esta oficina oferece um estudo prático da técnica da \"máscara neutra\" com o intuito de apresentar alguns de seus elementos técnicos ao corpo do bailarino. \n O caminho da oficina passará por uma introdução ao jogo da máscara teatral, se aprofundando mais especificamente na máscara neutra, para depois aplicar seus elementos técnicos na busca criativa de personagens em dança.\nQuando: Quinta 25 e sexta 26 \nHorário: 9h-12h",
+              "placeData": "AD02",
+              "site": ""
+              },
+              {
+              "eventId": 48,
+              "name": "Oficina",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Jussara Miller \nSinopse: \nQuando: Sexta 26 \nHorário: 9h-12h",
+              "placeData": "AD01",
+              "site": ""
+              },
+              {
+              "eventId": 49,
+              "name": "Oficina de Fotografia e Dança",
+              "type": 0,
+              "category": 0,
+              "date": "",
+              "shortDescription": "Ministrante: Leonardo Lin \nSinopse: Venha para fotografar E/OU dançar!\n Oficina voltada tanto para iniciantes quanto para avançados nas duas áreas. O intuito é compartilharmos conhecimento. Serão propostos 4 exercícios de fotografia de dança e de improvisação em dança. Será criado um grupo na internet para o compartilhamento das fotos feitas nesta oficina por todos integrantes.\n\n Para bailarinos: trazer roupa confortável para dançar e, se quiser, lenços ou tecido para interagir e improvisar.\n\n Para fotógrafos: trazer câmera fotográfica SLR ou Mirror Less ou SuperZoom ou Compacta  Avançada ou GoPro. (Sinta-se à vontade para trazer câmera analógica também).\nQuando: Sexta 26 \nHorário: 9h-12h",
+              "placeData": "AD04",
+              "site": ""
+              }
+              ]
+}

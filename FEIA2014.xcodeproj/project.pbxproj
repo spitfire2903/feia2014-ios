@@ -36,7 +36,9 @@
 		20E3F07D199B02EB00BA1CA8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F07C199B02EB00BA1CA8 /* MapViewController.m */; };
 		20E3F080199B02F200BA1CA8 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F07F199B02F200BA1CA8 /* ContactViewController.m */; };
 		20E3F083199B035100BA1CA8 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E3F082199B035100BA1CA8 /* BaseTableViewController.m */; };
+		705BB95819BF38D200A37B1A /* eventsLatin.json in Resources */ = {isa = PBXBuildFile; fileRef = 705BB95719BF38D200A37B1A /* eventsLatin.json */; };
 		70B71D1D19BE024700988E0E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 70B71D1C19BE024700988E0E /* events.json */; };
+		70B71D2019BF21F200988E0E /* PartyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B71D1F19BF21F200988E0E /* PartyCollectionViewCell.m */; };
 		70D3FE53199A534F009DB094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE52199A534F009DB094 /* Foundation.framework */; };
 		70D3FE55199A534F009DB094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE54199A534F009DB094 /* CoreGraphics.framework */; };
 		70D3FE57199A534F009DB094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3FE56199A534F009DB094 /* UIKit.framework */; };
@@ -127,7 +129,10 @@
 		20E3F081199B035100BA1CA8 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		20E3F082199B035100BA1CA8 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		42F3966719BE4B19B3D03B47 /* libPods-FEIA2014.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FEIA2014.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705BB95719BF38D200A37B1A /* eventsLatin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eventsLatin.json; sourceTree = "<group>"; };
 		70B71D1C19BE024700988E0E /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = events.json; path = Resources/events.json; sourceTree = "<group>"; };
+		70B71D1E19BF21F200988E0E /* PartyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyCollectionViewCell.h; sourceTree = "<group>"; };
+		70B71D1F19BF21F200988E0E /* PartyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyCollectionViewCell.m; sourceTree = "<group>"; };
 		70D3FE4F199A534F009DB094 /* FEIA2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FEIA2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D3FE52199A534F009DB094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70D3FE54199A534F009DB094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -209,6 +214,7 @@
 				201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */,
 				201B34AF19B6C8830081CC1C /* GeosansLight.ttf */,
 				20458F2119B7C66E00E65EFE /* eventos.txt */,
+				705BB95719BF38D200A37B1A /* eventsLatin.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 				20CB8A1C19AC21510076C1F8 /* FeiaCollectionViewCell.m */,
 				200CBFFB19BED7C300DE39F4 /* ExhibitionCollectionViewCell.h */,
 				200CBFFC19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m */,
+				70B71D1E19BF21F200988E0E /* PartyCollectionViewCell.h */,
+				70B71D1F19BF21F200988E0E /* PartyCollectionViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				200CBFFA19BEA03300DE39F4 /* Humanst521.ttf in Resources */,
 				20458F2419B7C8FB00E65EFE /* GeosansLight.ttf in Resources */,
 				70D3FE8A199A5A32009DB094 /* Storyboard_iPhone.storyboard in Resources */,
+				705BB95819BF38D200A37B1A /* eventsLatin.json in Resources */,
 				20458F2219B7C66E00E65EFE /* eventos.txt in Resources */,
 				70D3FE88199A5A22009DB094 /* Storyboard_iPad.storyboard in Resources */,
 			);
@@ -523,6 +532,7 @@
 				20458F2A19B7CAF300E65EFE /* UIView+FEIA.m in Sources */,
 				70D3FE95199A5FF5009DB094 /* Place.m in Sources */,
 				20458F2719B7C9E500E65EFE /* UIFont+FEIA.m in Sources */,
+				70B71D2019BF21F200988E0E /* PartyCollectionViewCell.m in Sources */,
 				70D3FE61199A534F009DB094 /* main.m in Sources */,
 				20E3F071199B02C100BA1CA8 /* WorkshopViewController.m in Sources */,
 				20CB8A1D19AC21510076C1F8 /* FeiaCollectionViewCell.m in Sources */,
@@ -664,13 +674,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ricardo Miranda (57X628MP2X)";
 				CURRENT_PROJECT_VERSION = 1.0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FEIA2014/FEIA2014-Prefix.pch";
 				INFOPLIST_FILE = "FEIA2014/FEIA2014-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e6534917-a4d3-4e2c-bfe7-5a3807dff6e2";
+				PROVISIONING_PROFILE = "9ffaeda4-6ce7-475c-bd74-7d5705cadeb1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -687,7 +697,7 @@
 				GCC_PREFIX_HEADER = "FEIA2014/FEIA2014-Prefix.pch";
 				INFOPLIST_FILE = "FEIA2014/FEIA2014-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e6534917-a4d3-4e2c-bfe7-5a3807dff6e2";
+				PROVISIONING_PROFILE = "9ffaeda4-6ce7-475c-bd74-7d5705cadeb1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

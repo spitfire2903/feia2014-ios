@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
     // Do any additional setup after loading the view.
     /*
      // http://www.appcoda.com/customize-navigation-status-bar-ios-7/

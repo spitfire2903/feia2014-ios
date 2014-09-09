@@ -29,14 +29,9 @@
 
 
 -(void)cellWithEvent:(Event*)event{
-    NSDateFormatter* dt = nil;
-    //UIImage* bkgImage = nil;
-    
-    dt = [[NSDateFormatter alloc] init];
-    [dt setDateFormat:@"dd/MM - HH:mm"];
     
     self.eventName.text = event.name;
-    self.eventDate.text = [dt stringFromDate:event.date];
+    self.eventDate.text = [NSString stringWithFormat:@"%@ %@", [event getDateString], [event getTimeString]];
     self.eventIcon.image = [event getIcon];
     
     self.eventName.font = [UIFont geosansLightWithSize:22];

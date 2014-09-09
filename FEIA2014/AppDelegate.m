@@ -30,12 +30,15 @@
     
     NSDictionary* titleSettings = @{
         NSFontAttributeName: [UIFont geosansLightWithSize:18/*16*/],
+        
         NSForegroundColorAttributeName: [UIColor blackColor]
     };
     
     NSDictionary* barButtonSettings = @{
         NSFontAttributeName: [UIFont geosansLightWithSize:16]
     };
+    
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
     
     [[UIButton appearance].titleLabel setFont:[UIFont geosansLightWithSize:15]];
     [[UILabel appearance] setFont:[UIFont geosansLightWithSize:17]];
@@ -44,7 +47,6 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateDisabled];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonSettings forState:UIControlStateSelected];
-    
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     
     //[UIFont showFonts];

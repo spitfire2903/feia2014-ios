@@ -71,6 +71,18 @@ static EventManager *_eventManager = nil;
     return [self.eventList copy];
 }
 
+-(NSArray*)eventByType:(EventType)type{
+    NSArray* result = nil;
+    NSPredicate* predicate = nil;
+    
+    predicate = [NSPredicate predicateWithFormat:@"type = %d", type];
+    
+    result = [[self events] filteredArrayUsingPredicate:predicate];
+    
+    return result;
+}
+
+
 -(NSArray*)eventByType:(EventType)type andCategory:(EventCategory)category{
     NSArray* result = nil;
     NSPredicate* predicate = nil;
@@ -226,6 +238,60 @@ static EventManager *_eventManager = nil;
 //    NSString* description = nil;
     NSSortDescriptor* descriptor = nil;
     NSArray *category = @[@"Dança", @"Música", @"Artes Visuas", @"Artes Cênicas", @"Midialogia"];
+    NSArray* events = nil;
+    NSMutableArray* jsonEvents = nil;
+    
+    
+    
+    
+    
+    NSString* fileContents = nil;
+    NSDictionary* workshops = nil;
+    NSData* data = nil;
+    NSError* error = nil;
+    
+    fileContents = [[NSBundle mainBundle] pathForResource:@"events" ofType:@"json"];
+    /*data = [NSData dataWithContentsOfFile:fileContents];
+    
+    workshops = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    events = [workshops objectForKey:@"events"];
+    
+    NSLog(@"Events: %@", events);
+    */
+    
+    jsonEvents = [[NSMutableArray alloc] init];
+    
+    fileContents = [NSString stringWithContentsOfFile:fileContents encoding:NSUTF8StringEncoding error:&error];
+    data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+    //data = [data subdataWithRange:NSMakeRange(0, [data length] - 1)];
+    workshops = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    events = [workshops objectForKey:@"events"];
+    
+    //NSLog(@"Events: %@", events);
+    
+    for (NSObject* object in events) {
+        Event* event = nil;
+        
+        event = [Event new];
+        [event setName:[object valueForKey:@"name"]];
+        [event setDateWithString:[object valueForKey:@"date"]];
+        [event setShortDescription:[object valueForKey:@"shortDescription"]];
+        
+        if([object valueForKey:@"author"]){
+            [event setAuthor:[object valueForKey:@"author"]];
+        }
+        
+        [event setPlaceData:[object valueForKey:@"placeData"]];
+        [event setSite:[object valueForKey:@"site"]];
+        [event setCategory:[[object valueForKey:@"category"] intValue]];
+        [event setType:[[object valueForKey:@"type"] intValue]];
+        
+        [jsonEvents addObject:event];
+        //NSLog(@">> %@",object);
+    }
+    
+    //[self.eventList addObjectsFromArray:jsonEvents];
+    
     __block int eventId = 0;
     [category each:^(id object) {
         //NSLog(@"Car: %@", object);
@@ -240,14 +306,14 @@ static EventManager *_eventManager = nil;
            [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_EXHIBITION andCategory:categoryIndex]];
            
             eventId++;
-           
+           /*
             name = [NSString stringWithFormat:@"Oficina %@ %d", object, index];
             description = [NSString stringWithFormat:@"Oficina Descrição %@ %d", object, index];
             date = [NSDate randomDateInYearOfDate];
             
             [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:categoryIndex]];
            
-           eventId++;
+           eventId++;*/
         }];
     }];
     
@@ -260,14 +326,17 @@ static EventManager *_eventManager = nil;
         [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_PARTY andCategory:0]];
         
         eventId++;
-        
+        /*
         name = [NSString stringWithFormat:@"Oficina Interdisciplinar %d", index];
         description = [NSString stringWithFormat:@"Oficina Descrição %d", index];
         date = [NSDate randomDateInYearOfDate];
         
         [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:EVENT_CATEGORY_GENERAL]];
         
+         eventId++;
+         */
     }];
+    
     
     /*
     srandom(time(NULL));

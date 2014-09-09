@@ -79,6 +79,18 @@
     return time;
 }
 
+-(void)setDateWithString:(NSString*)date{
+    NSDateFormatter* formatter = nil;
+    NSDate* eventDate = nil;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    eventDate = [formatter dateFromString:date];
+    
+    self.date = eventDate;
+}
+
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
     Event* event = nil;
     

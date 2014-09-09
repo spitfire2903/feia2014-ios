@@ -154,4 +154,5 @@ static NSString* const EXHIBITION_CELL_IDENTIFIER = @"exhibitionCell";
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(0, 12, 12, 12);
 }
+
 @end

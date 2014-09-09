@@ -39,7 +39,7 @@ static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    self.eventList = [[[EventManager sharedDatabase] events] mutableCopy];
+    self.eventList = [[EventManager sharedDatabase] eventByType:EVENT_TYPE_EXHIBITION];
     
     self.eventFilteredList = [self.eventList copy];
     

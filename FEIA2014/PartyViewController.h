@@ -8,7 +8,8 @@
 
 #import "BaseViewController.h"
 #import "EventInfoViewController.h"
+#import "PartyCollectionViewCell.h"
 
-@interface PartyViewController : BaseViewController
+@interface PartyViewController : BaseViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @end

@@ -53,11 +53,8 @@
     
     [self showLoading];
     
-    NSDateFormatter* dt = nil;
     UIColor* bkColor = nil;
-    
-    dt = [[NSDateFormatter alloc] init];
-    [dt setDateFormat:@"dd/MM - HH:mm"];
+    NSString* eventPlaceDate = nil;
     
     self.eventName.textColor = [UIColor whiteColor];
     self.eventDate.textColor = [UIColor whiteColor];
@@ -70,7 +67,15 @@
     [self.eventHeader sendSubviewToBack:self.eventHeaderImage];
 
     self.eventName.text = self.event.name;
-    self.eventDate.text = [NSString stringWithFormat:@"%@ %@", [self.event getDateString], [self.event getTimeString]];
+    
+    if(self.event.placeData && self.event.placeData.length > 0){
+        eventPlaceDate = [NSString stringWithFormat:@"%@ - %@ %@", self.event.placeData, [self.event getDateString], [self.event getTimeString]];
+    } else{
+        eventPlaceDate = [NSString stringWithFormat:@"%@ %@", [self.event getDateString], [self.event getTimeString]];
+    }
+    
+    self.eventDate.text = eventPlaceDate;
+
     self.eventDescription.text = self.event.shortDescription;
     
     if(self.event.author && self.event.author.length > 0){
@@ -119,7 +124,12 @@
 }
 
 -(void)disableSave{
+    NSDictionary* barButtonSettings = @{
+        NSFontAttributeName: [UIFont geosansLightWithSize:16]
+    };
     [self.btnSave setTitle:@"Salvo"];
+    [self.btnSave setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];
+    [self.btnSave setTitleTextAttributes:barButtonSettings forState:UIControlStateDisabled];
     self.btnSave.enabled = NO;
     self.btnSave.tintColor = [UIColor darkGrayColor];
 }

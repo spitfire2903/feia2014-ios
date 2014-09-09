@@ -40,6 +40,7 @@ typedef enum {
 -(UIImage*)getIcon;
 -(NSString*)getDateString;
 -(NSString*)getTimeString;
+-(void)setDateWithString:(NSString*)date;
 
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
 

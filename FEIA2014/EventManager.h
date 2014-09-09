@@ -28,6 +28,7 @@
 
 -(BOOL)isEventFavorited:(NSNumber*)eventId;
 
+-(NSArray*)eventByType:(EventType)type;
 -(NSArray*)eventByType:(EventType)type andCategory:(EventCategory)category;
 //-(NSArray *) calendarEvents;
 /*

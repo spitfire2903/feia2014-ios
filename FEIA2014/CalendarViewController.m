@@ -38,6 +38,8 @@ static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    self.view.backgroundColor = [UIColor partyColor];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
