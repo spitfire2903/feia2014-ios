@@ -24,9 +24,12 @@
     return [UIFont fontWithName:@"GeosansLight" size:fontSize];
 }
 
-
 +(UIFont*)geosansLightObliqueWithSize:(CGFloat)fontSize{
     return [UIFont fontWithName:@"GeosansLight-Oblique" size:fontSize];
+}
+
++(UIFont*)humanistLightWithSize:(CGFloat)fontSize{
+    return [UIFont fontWithName:@"Humanist521BT-Light" size:fontSize];
 }
 
 @end

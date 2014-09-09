@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "EventInfoViewController.h"
+#import "ExhibitionCollectionViewCell.h"
 
-@interface ExhibitionViewController : BaseViewController
+@interface ExhibitionViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic) EventCategory category;
 

@@ -8,6 +8,8 @@
 
 #import "MenuViewController.h"
 
+static int const MENU_WIDTH = 260;
+
 static NSString* const MENU_CELL_IDENTIFIER = @"menuCell";
 
 static NSString* const SEGUE_FEIA = @"feiaSegue";
@@ -22,6 +24,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
 @interface MenuViewController ()
 
 //@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property EventCategory eventCategory;
 
 @end
 
@@ -78,7 +81,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
             
             break;
         case 1:
-            number = 5;
+            number = 4;//5;
             
             break;
         case 2:
@@ -101,7 +104,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
     
     image = [image imageByApplyingAlpha:0.4];
     
-    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 160, self.tableView.frame.size.height)];
+    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, MENU_WIDTH, self.tableView.frame.size.height)];
     backgroundImage.contentMode = UIViewContentModeScaleAspectFill;
     backgroundImage.image = image;
     
@@ -205,16 +208,14 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
 }
 
 -(CGFloat) leftMenuVisibleWidth{
-    return 260;
+    return MENU_WIDTH;
 }
 -(void) prepareForSwitchToContentViewController:(UINavigationController *)content{
     UIViewController* controller = [content.viewControllers objectAtIndex:0];
 
-    // TODO: fazer para mudar o eventCategory ou o eventType
-    
-    if ([controller isKindOfClass:[BaseViewController class]]) {
-        BaseViewController* viewController = (BaseViewController*)controller;
-        viewController.menuViewController = self;
+    if ([controller isKindOfClass:[ExhibitionViewController class]]) {
+        ExhibitionViewController* viewController = (ExhibitionViewController*)controller;
+        viewController.category = self.eventCategory;
     }
 }
 
@@ -277,10 +278,10 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
                 cellText = @"Mapa";
                 
                 break;
-            case 4:
+           /* case 4:
                 cellText = @"Contato";
                 
-                break;
+                break;*/
         }
     } else if(indexPath.section == 2){
         switch (indexPath.row) {
@@ -343,35 +344,41 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
                 segueName = SEGUE_MAP;
                 
                 break;
-            case 4:
+            /*case 4:
                 segueName = SEGUE_CONTACT;
                 
-                break;
+                break;*/
         }
     } else if(indexPath.section == 2){
         switch (indexPath.row) {
             case 0:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;
+                self.eventCategory = EVENT_CATEGORY_GENERAL;
                 
                 break;
             case 1:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;;
+                self.eventCategory = EVENT_CATEGORY_VISUAL_ARTS;
                 
                 break;
             case 2:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;;
+                self.eventCategory = EVENT_CATEGORY_PERFORMING_ARTS;
                 
                 break;
             case 3:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;;
+                self.eventCategory = EVENT_CATEGORY_DANCING;
                 
                 break;
             case 4:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;;
+                self.eventCategory = EVENT_CATEGORY_MEDIALOGY;
                 
                 break;
             case 5:
-                segueName = SEGUE_FEIA;//SEGUE_WORKSHOP;;
+                segueName = SEGUE_EXHIBITION;//SEGUE_WORKSHOP;;
+                self.eventCategory = EVENT_CATEGORY_MUSIC;
                 
                 break;
         }

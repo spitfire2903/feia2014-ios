@@ -47,6 +47,8 @@
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     
+    //[UIFont showFonts];
+    
     /*[[UINavigationBar appearance] setTitleTextAttributes:
         [NSDictionary dictionaryWithObjectsAndKeys:
              [UIColor blackColor],

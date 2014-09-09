@@ -9,6 +9,7 @@
 #import "CalendarViewController.h"
 
 static NSString* const CALENDAR_CELL_IDENTIFIER = @"calendarCell";
+static NSString* const EVENT_INFO_SEGUE = @"eventInfoSegue";
 
 @interface CalendarViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -42,9 +43,30 @@ static NSString* const CALENDAR_CELL_IDENTIFIER = @"calendarCell";
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    [self showLoading];
+    
     self.myEventsDict = [[EventManager sharedDatabase] myEventsDict];
     
+    [[self.tableView backgroundView] removeFromSuperview];
+    
+    UIImageView* backgroundImage = nil;
+    UIImage* image = nil;
+    
+    image = [UIImage imageNamed:@"ic_logo_feia_rosa"];
+    
+    image = [image imageByApplyingAlpha:0.3];
+    
+    backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height)];
+    backgroundImage.contentMode = UIViewContentModeScaleAspectFit;
+    backgroundImage.image = image;
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    [self.tableView setSeparatorColor:[[UIColor whiteColor] colorWithAlphaComponent:0.4]];
+    self.tableView.backgroundView = backgroundImage;
+    
     [self.tableView reloadData];
+    
+    [self hideLoading];
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,9 +157,36 @@ static NSString* const CALENDAR_CELL_IDENTIFIER = @"calendarCell";
     
     cell.textLabel.text = eventName;
     cell.detailTextLabel.text = eventTime;
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:EVENT_INFO_SEGUE sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    Event* eventSelected = nil;
+    NSArray* eventsByDay = nil;
+    NSIndexPath* indexPath = nil;
+    
+    indexPath = [self.tableView indexPathForSelectedRow];
+    eventsByDay = [self.myEventsDict objectForKey:[NSNumber numberWithInteger:indexPath.section]];
+    
+    eventSelected = [eventsByDay objectAtIndex:indexPath.row];
+    
+    if ([[segue identifier] isEqualToString:EVENT_INFO_SEGUE]) {
+        
+        EventInfoViewController *info = [segue destinationViewController];
+        info.event = eventSelected;
+    }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 /*
 -(NSArray*)eventBySection:(NSIndexPath*)indexPath{
     NSArray* events = nil;

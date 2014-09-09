@@ -71,6 +71,16 @@ static EventManager *_eventManager = nil;
     return [self.eventList copy];
 }
 
+-(NSArray*)eventByType:(EventType)type andCategory:(EventCategory)category{
+    NSArray* result = nil;
+    NSPredicate* predicate = nil;
+    
+    predicate = [NSPredicate predicateWithFormat:@"category = %d AND type = %d", category, type];
+    
+    result = [[self events] filteredArrayUsingPredicate:predicate];
+    
+    return result;
+}
 
 -(NSDictionary *)eventsIdDict
 {
@@ -132,7 +142,7 @@ static EventManager *_eventManager = nil;
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:CALENDAR_ENTITY inManagedObjectContext:context ];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
-    predicate = [NSPredicate predicateWithFormat:@"%@ = %d", EVENT_ID_PROPERTY, [eventId intValue]];
+    predicate = [NSPredicate predicateWithFormat:@"eventId = %d", [eventId intValue]];//@"%@ = %d", EVENT_ID_PROPERTY, [eventId intValue]];
     
     [request setEntity:entityDescription];
     [request setPredicate:predicate];
@@ -250,6 +260,13 @@ static EventManager *_eventManager = nil;
         [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_PARTY andCategory:0]];
         
         eventId++;
+        
+        name = [NSString stringWithFormat:@"Oficina Interdisciplinar %d", index];
+        description = [NSString stringWithFormat:@"Oficina Descrição %d", index];
+        date = [NSDate randomDateInYearOfDate];
+        
+        [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:EVENT_CATEGORY_GENERAL]];
+        
     }];
     
     /*

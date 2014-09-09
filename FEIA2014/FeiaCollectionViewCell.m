@@ -30,7 +30,7 @@
 
 -(void)cellWithEvent:(Event*)event{
     NSDateFormatter* dt = nil;
-    UIImage* bkgImage = nil;
+    //UIImage* bkgImage = nil;
     
     dt = [[NSDateFormatter alloc] init];
     [dt setDateFormat:@"dd/MM - HH:mm"];
@@ -39,26 +39,8 @@
     self.eventDate.text = [dt stringFromDate:event.date];
     self.eventIcon.image = [event getIcon];
     
-    switch(event.category){
-        case EVENT_CATEGORY_DANCING:
-            bkgImage = [UIImage imageNamed:@"bkg2_dancing"];
-            break;
-        case EVENT_CATEGORY_VISUAL_ARTS:
-            bkgImage = [UIImage imageNamed:@"bkg2_visual_arts"];
-            break;
-        case EVENT_CATEGORY_PERFORMING_ARTS:
-            bkgImage = [UIImage imageNamed:@"bkg2_performing_arts"];
-            break;
-        case EVENT_CATEGORY_MUSIC:
-            bkgImage = [UIImage imageNamed:@"bkg2_music"];
-            break;
-        case EVENT_CATEGORY_MEDIALOGY:
-            bkgImage = [UIImage imageNamed:@"bkg2_medialogy"];
-            break;
-        case EVENT_CATEGORY_GENERAL:
-            bkgImage = [UIImage imageNamed:@"bkg2_credits"];
-            break;
-    }
+    self.eventName.font = [UIFont geosansLightWithSize:22];
+    self.eventDate.font = [UIFont geosansLightObliqueWithSize:16];
     
     self.backgroundColor = [UIColor clearColor];//[UIColor colorWithPatternImage:bkgImage];
 }

@@ -10,7 +10,6 @@
 
 @interface PartnerViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *parceirosLabel;
 
 @end
@@ -29,7 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.view.backgroundColor = [UIColor colorwithR:202 g:133 b:109 a:1];
+    //self.parceirosLabel.font = [UIFont humanistLightWithSize:16];
 }
 
 - (void)didReceiveMemoryWarning

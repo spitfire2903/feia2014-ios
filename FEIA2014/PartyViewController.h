@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "EventInfoViewController.h"
 
 @interface PartyViewController : BaseViewController
 

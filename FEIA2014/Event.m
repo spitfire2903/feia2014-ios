@@ -85,6 +85,7 @@
     event = [[Event alloc] init];
     
     [event setEventId:[NSNumber numberWithInt:eventId]];
+    [event setAuthor:@"José Ubaldo da Silva Sauro"];
     [event setName:name];
     [event setDate:date];
     [event setShortDescription:description];

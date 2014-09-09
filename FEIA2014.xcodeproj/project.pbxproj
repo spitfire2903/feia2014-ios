@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200CBFFA19BEA03300DE39F4 /* Humanst521.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200CBFF919BEA03300DE39F4 /* Humanst521.ttf */; };
+		200CBFFD19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 200CBFFC19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m */; };
 		201B348319B43D680081CC1C /* FEIACategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348219B43D680081CC1C /* FEIACategoryPickerTextField.m */; };
 		201B348619B44FA30081CC1C /* UIImage+FEIA.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348519B44FA30081CC1C /* UIImage+FEIA.m */; };
 		201B348819B4660E0081CC1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201B348719B4660E0081CC1C /* MapKit.framework */; };
@@ -71,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		0468B5DDAB2C4AB4953386A2 /* Pods-FEIA2014.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FEIA2014.xcconfig"; path = "Pods/Pods-FEIA2014.xcconfig"; sourceTree = "<group>"; };
+		200CBFF919BEA03300DE39F4 /* Humanst521.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Humanst521.ttf; sourceTree = "<group>"; };
+		200CBFFB19BED7C300DE39F4 /* ExhibitionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionCollectionViewCell.h; sourceTree = "<group>"; };
+		200CBFFC19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionCollectionViewCell.m; sourceTree = "<group>"; };
 		201B348119B43D680081CC1C /* FEIACategoryPickerTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEIACategoryPickerTextField.h; sourceTree = "<group>"; };
 		201B348219B43D680081CC1C /* FEIACategoryPickerTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEIACategoryPickerTextField.m; sourceTree = "<group>"; };
 		201B348419B44FA30081CC1C /* UIImage+FEIA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FEIA.h"; sourceTree = "<group>"; };
@@ -199,6 +204,7 @@
 		201B34AD19B6C6E80081CC1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				200CBFF919BEA03300DE39F4 /* Humanst521.ttf */,
 				70B71D1C19BE024700988E0E /* events.json */,
 				201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */,
 				201B34AF19B6C8830081CC1C /* GeosansLight.ttf */,
@@ -212,6 +218,8 @@
 			children = (
 				20CB8A1B19AC21510076C1F8 /* FeiaCollectionViewCell.h */,
 				20CB8A1C19AC21510076C1F8 /* FeiaCollectionViewCell.m */,
+				200CBFFB19BED7C300DE39F4 /* ExhibitionCollectionViewCell.h */,
+				200CBFFC19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -448,6 +456,7 @@
 				20458F2319B7C8F800E65EFE /* GeosansLight-Oblique.ttf in Resources */,
 				70D3FE5F199A534F009DB094 /* InfoPlist.strings in Resources */,
 				70D3FE6A199A534F009DB094 /* Images.xcassets in Resources */,
+				200CBFFA19BEA03300DE39F4 /* Humanst521.ttf in Resources */,
 				20458F2419B7C8FB00E65EFE /* GeosansLight.ttf in Resources */,
 				70D3FE8A199A5A32009DB094 /* Storyboard_iPhone.storyboard in Resources */,
 				20458F2219B7C66E00E65EFE /* eventos.txt in Resources */,
@@ -531,6 +540,7 @@
 				20E3F07D199B02EB00BA1CA8 /* MapViewController.m in Sources */,
 				20E3F080199B02F200BA1CA8 /* ContactViewController.m in Sources */,
 				20E3F074199B02CB00BA1CA8 /* ExhibitionViewController.m in Sources */,
+				200CBFFD19BED7C300DE39F4 /* ExhibitionCollectionViewCell.m in Sources */,
 				20E3F07A199B02E200BA1CA8 /* PartnerViewController.m in Sources */,
 				20CB8A2419AC34850076C1F8 /* NSDate+FEIA.m in Sources */,
 			);

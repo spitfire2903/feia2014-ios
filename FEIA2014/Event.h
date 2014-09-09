@@ -28,6 +28,7 @@ typedef enum {
 
 @property (nonatomic) NSNumber* eventId;
 @property (nonatomic) NSString* name;
+@property (nonatomic) NSString* author;
 @property (nonatomic) EventType type;
 @property (nonatomic) EventCategory category;
 @property (nonatomic) NSDate* date;

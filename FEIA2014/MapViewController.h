@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface MapViewController : BaseViewController
 

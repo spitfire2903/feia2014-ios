@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "UIFont+FEIA.h"
 
 @interface FeiaCollectionViewCell : UICollectionViewCell
 

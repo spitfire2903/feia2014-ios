@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDate;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
 @property (weak, nonatomic) IBOutlet UIView *eventHeader;
+@property (weak, nonatomic) IBOutlet UILabel *eventAuthor;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSave;
 @property (weak, nonatomic) IBOutlet UIImageView *eventHeaderImage;
 
@@ -72,7 +73,16 @@
     self.eventDate.text = [NSString stringWithFormat:@"%@ %@", [self.event getDateString], [self.event getTimeString]];
     self.eventDescription.text = self.event.shortDescription;
     
-    [self.eventDescription sizeToFit];
+    if(self.event.author && self.event.author.length > 0){
+        self.eventAuthor.text = self.event.author;
+    } else{
+        self.eventAuthor.text = @"";
+    }
+    
+    /*self.eventDescription.font = [UIFont geosansLightWithSize:30];
+    self.eventDescription.text = @"Esse ano, seguindo a máxima de que \"saco vazio não para em pé\", a organização do FEIA realizou uma parceria inédita com alguns restaurantes de Barão Geraldo para realizar o Banquete FEIA. O Banquete FEIA consiste em uma lista de restaurantes, que você confere abaixo, em que cada um oferece um prato a um preço especial para todo mundo que apresentar essa programação.\n\nEsse ano, seguindo a máxima de que \"saco vazio não para em pé\", a organização do FEIA realizou uma parceria inédita com alguns restaurantes de Barão Geraldo para realizar o Banquete FEIA. O Banquete FEIA consiste em uma lista de restaurantes, que você confere abaixo, em que cada um oferece um prato a um preço especial para todo mundo que apresentar essa programação.\n\n";
+     */
+    //[self.eventDescription sizeToFit];
     
     switch (self.event.category) {
         case EVENT_CATEGORY_DANCING:

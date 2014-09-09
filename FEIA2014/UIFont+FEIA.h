@@ -16,4 +16,6 @@
 
 +(UIFont*)geosansLightObliqueWithSize:(CGFloat)fontSize;
 
++(UIFont*)humanistLightWithSize:(CGFloat)fontSize;
+
 @end

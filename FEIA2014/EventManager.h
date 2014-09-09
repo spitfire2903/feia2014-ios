@@ -27,6 +27,8 @@
 -(NSDictionary *)myEventsDict;
 
 -(BOOL)isEventFavorited:(NSNumber*)eventId;
+
+-(NSArray*)eventByType:(EventType)type andCategory:(EventCategory)category;
 //-(NSArray *) calendarEvents;
 /*
 -(void) swapOutlawsAtIndex:(NSInteger)firstIndex otherIndex:(NSInteger)secondIndex;

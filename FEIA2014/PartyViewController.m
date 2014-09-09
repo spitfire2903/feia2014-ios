@@ -8,6 +8,8 @@
 
 #import "PartyViewController.h"
 
+static NSString* const PARTY_INFO_SEGUE = @"partyInfoSegue";
+
 @interface PartyViewController ()
 
 @end

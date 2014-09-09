@@ -8,6 +8,7 @@
 
 #import "BaseTableViewController.h"
 #import "BaseViewController.h"
+#import "ExhibitionViewController.h"
 #import <SASlideMenu/SASlideMenuDataSource.h>
 #import <SASlideMenu/SASlideMenuDelegate.h>
 #import <SASlideMenu/SASlideMenuViewController.h>
