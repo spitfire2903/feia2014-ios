@@ -18,5 +18,8 @@
 + (UIColor *) visualArtsColor;
 + (UIColor *) performingArtsColor;
 + (UIColor *) medialogyColor;
++ (UIColor *) generalColor;
++ (UIColor *) creditsColor;
++ (UIColor *) partyColor;
 
 @end

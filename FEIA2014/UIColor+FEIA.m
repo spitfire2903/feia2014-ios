@@ -98,6 +98,20 @@
     return [self colorWithHexString:@"AB5333"];
     //return [self colorWithHexString:@"#4575b4"];
 }
+
++ (UIColor *) generalColor{
+    return [self colorWithHexString:@"EDB83B"];
+}
+
++ (UIColor *) creditsColor{
+    return [self colorWithHexString:@"A8AB8A"];
+}
+
++ (UIColor *) partyColor{
+    return [self colorWithHexString:@"BA4A4A"];
+    //return [self colorWithHexString:@"523E44"];
+}
+
 /*
  #d73027    #fc8d59    #fee090
  #e0f3f8    #91bfdb    #4575b4

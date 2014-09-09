@@ -29,6 +29,7 @@ static NSString* const PARTY_INFO_SEGUE = @"partyInfoSegue";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor partyColor];
 }
 
 - (void)didReceiveMemoryWarning

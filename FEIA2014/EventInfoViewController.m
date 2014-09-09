@@ -100,6 +100,13 @@
         case EVENT_CATEGORY_MEDIALOGY:
             bkColor = [UIColor medialogyColor];
             break;
+        case EVENT_CATEGORY_GENERAL:
+            bkColor = [UIColor creditsColor];
+            break;
+    }
+    
+    if(self.event.type == EVENT_TYPE_PARTY){
+        bkColor = [UIColor partyColor];
     }
     
     self.eventHeader.backgroundColor = bkColor;

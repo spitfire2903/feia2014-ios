@@ -333,7 +333,7 @@ static NSString* const SEGUE_CONTACT = @"contactSegue";
                 
                 break;
             case 1:
-                segueName = SEGUE_FEIA;//SEGUE_PARTY;
+                segueName = SEGUE_PARTY;
                 
                 break;
             case 2:
