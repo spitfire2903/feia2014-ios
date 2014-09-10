@@ -83,7 +83,7 @@ static NSString* const EXHIBITION_CELL_IDENTIFIER = @"exhibitionCell";
     
     image = [UIImage imageNamed:@"bkg_cabelos_branco"];
     
-    image = [image imageByApplyingAlpha:0.3];
+    image = [image imageByApplyingAlpha:0.2];
     
     backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.frame.size.width, self.collectionView.frame.size.height)];
     backgroundImage.contentMode = UIViewContentModeScaleAspectFill;
@@ -148,7 +148,7 @@ static NSString* const EXHIBITION_CELL_IDENTIFIER = @"exhibitionCell";
 
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
     
-    return 12.0;
+    return 16;
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
