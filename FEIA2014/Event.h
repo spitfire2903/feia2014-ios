@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Place.h"
+#import "AppDelegate.h"
+#import "EventDB.h"
 
 typedef enum {
     EVENT_TYPE_WORKSHOP = 0,
@@ -29,9 +31,11 @@ typedef enum {
 @property (nonatomic) NSNumber* eventId;
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSString* author;
+@property (nonatomic) int duration;
 @property (nonatomic) EventType type;
 @property (nonatomic) EventCategory category;
 @property (nonatomic) NSDate* date;
+@property (nonatomic) NSMutableArray* dateArray;
 @property (nonatomic) NSString* shortDescription;
 @property (nonatomic) Place* place;
 @property (nonatomic) NSString* placeData;
@@ -41,6 +45,11 @@ typedef enum {
 -(NSString*)getDateString;
 -(NSString*)getTimeString;
 -(void)setDateWithString:(NSString*)date;
+-(void)setDateArrayFromJson:(NSArray*)dateArray;
+-(void)setDateArrayFromEventDB:(NSArray*)dateArray;
+
+-(NSManagedObject*)managedObjectFromEvent;
+-(void)eventFromManagedObject:(EventDB*)eventDB;
 
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category;
 

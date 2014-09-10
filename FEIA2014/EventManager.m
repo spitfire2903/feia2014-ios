@@ -9,10 +9,11 @@
 #import "EventManager.h"
 
 static NSString* const CALENDAR_ENTITY = @"MyEvent";
-static NSString* const EVENT_ID_PROPERTY = @"eventId";
+static NSString* const EVENT_ENTITY = @"EventDB";
+/*static NSString* const EVENT_ID_PROPERTY = @"eventId";
 static NSString* const EVENT_CATEGORY_PROPERTY = @"category";
 static NSString* const EVENT_TYPE_PROPERTY = @"type";
-
+*/
 @interface EventManager()
 
 @property (strong,nonatomic) NSMutableArray *eventList;
@@ -237,61 +238,98 @@ static EventManager *_eventManager = nil;
 //    NSString* name = nil;
 //    NSString* description = nil;
     NSSortDescriptor* descriptor = nil;
-    NSArray *category = @[@"Dança", @"Música", @"Artes Visuas", @"Artes Cênicas", @"Midialogia"];
     NSArray* events = nil;
     NSMutableArray* jsonEvents = nil;
-    
-    
-    
-    
-    
+    NSError *error = nil;
+    AppDelegate *appDelegate = nil;
+    NSManagedObjectContext *context = nil;
+    NSEntityDescription *entityDescription = nil;
+    NSFetchRequest *request = nil;
+    NSManagedObject *newEvent = nil;
     NSString* fileContents = nil;
-    NSDictionary* workshops = nil;
+    NSDictionary* jsonDict = nil;
     NSData* data = nil;
-    NSError* error = nil;
     
-    fileContents = [[NSBundle mainBundle] pathForResource:@"events" ofType:@"json"];
-    /*data = [NSData dataWithContentsOfFile:fileContents];
     
-    workshops = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    events = [workshops objectForKey:@"events"];
+    appDelegate = [[UIApplication sharedApplication] delegate];
+    context = [appDelegate managedObjectContext];
     
-    NSLog(@"Events: %@", events);
-    */
+    entityDescription = [NSEntityDescription entityForName:EVENT_ENTITY inManagedObjectContext:context ];
+    request = [[NSFetchRequest alloc] init];
     
-    jsonEvents = [[NSMutableArray alloc] init];
+    [request setEntity:entityDescription];
     
-    fileContents = [NSString stringWithContentsOfFile:fileContents encoding:NSUTF8StringEncoding error:&error];
-    data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
-    //data = [data subdataWithRange:NSMakeRange(0, [data length] - 1)];
-    workshops = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    events = [workshops objectForKey:@"events"];
+    events = [context executeFetchRequest:request error:&error];
     
-    //NSLog(@"Events: %@", events);
+    /* Delete event core data
+    for (EventDB* e in events) {
+        [context deleteObject:e];
+    }
+
+    [context save:&error];
     
-    for (NSObject* object in events) {
-        Event* event = nil;
+    if(true){
+     */
+    if([events count] <= 0){
+        fileContents = [[NSBundle mainBundle] pathForResource:@"eventsLatin" ofType:@"json"];
         
-        event = [Event new];
-        [event setName:[object valueForKey:@"name"]];
-        [event setDateWithString:[object valueForKey:@"date"]];
-        [event setShortDescription:[object valueForKey:@"shortDescription"]];
+        jsonEvents = [[NSMutableArray alloc] init];
         
-        if([object valueForKey:@"author"]){
-            [event setAuthor:[object valueForKey:@"author"]];
+        fileContents = [NSString stringWithContentsOfFile:fileContents encoding:NSUTF8StringEncoding error:&error];
+        data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+        //data = [data subdataWithRange:NSMakeRange(0, [data length] - 1)];
+        jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        events = [jsonDict objectForKey:@"events"];
+        
+        //NSLog(@"Events: %@", events);
+        
+        for (NSObject* object in events) {
+            Event* event = nil;
+            
+            event = [Event new];
+            [event setEventId:[object valueForKey:@"eventId"]];
+            [event setName:[object valueForKey:@"name"]];
+            [event setDateArrayFromJson:[object valueForKey:@"date"]];
+            [event setShortDescription:[object valueForKey:@"shortDescription"]];
+            
+            if([object valueForKey:@"author"]){
+                [event setAuthor:[object valueForKey:@"author"]];
+            }
+            
+            if([object valueForKey:@"duration"]){
+                [event setDuration:[[object valueForKey:@"duration"] intValue]];
+            }
+            
+            [event setPlaceData:[object valueForKey:@"placeData"]];
+            [event setSite:[object valueForKey:@"site"]];
+            [event setCategory:[[object valueForKey:@"category"] intValue]];
+            [event setType:[[object valueForKey:@"type"] intValue]];
+            
+            [jsonEvents addObject:event];
+            //NSLog(@">> %@",object);
+        }
+
+        // Save events in core data
+        for (Event* event in jsonEvents) {
+            newEvent = [event managedObjectFromEvent];
+            
+            [context save:&error];
         }
         
-        [event setPlaceData:[object valueForKey:@"placeData"]];
-        [event setSite:[object valueForKey:@"site"]];
-        [event setCategory:[[object valueForKey:@"category"] intValue]];
-        [event setType:[[object valueForKey:@"type"] intValue]];
+        [self.eventList addObjectsFromArray:jsonEvents];
+    } else{
+        for (EventDB* eventDB in events) {
+            Event* event = [Event new];
+            
+            [event eventFromManagedObject:eventDB];
+            
+            [self.eventList addObject:event];
+        }
         
-        [jsonEvents addObject:event];
-        //NSLog(@">> %@",object);
+        // Lista de Event <- EventDB ERRO
+        //self.eventList = events;
     }
-    
-    //[self.eventList addObjectsFromArray:jsonEvents];
-    
+    /*
     __block int eventId = 0;
     [category each:^(id object) {
         //NSLog(@"Car: %@", object);
@@ -313,10 +351,10 @@ static EventManager *_eventManager = nil;
             
             [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:categoryIndex]];
            
-           eventId++;*/
+           eventId++;*//*
         }];
     }];
-    
+    *//*
     [@1 upto:8 do:^(NSInteger index) {
         
         NSString* name = [NSString stringWithFormat:@"Noites FEIA  %d", index];
@@ -334,9 +372,9 @@ static EventManager *_eventManager = nil;
         [self.eventList addObject:[Event eventWithId:eventId andName:name andDate:date andDescription:description andType:EVENT_TYPE_WORKSHOP andCategory:EVENT_CATEGORY_GENERAL]];
         
          eventId++;
-         */
+         *//*
     }];
-    
+    */
     
     /*
     srandom(time(NULL));

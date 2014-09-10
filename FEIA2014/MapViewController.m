@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.mapView.showsUserLocation = YES;
     // Do any additional setup after loading the view.
 }
 

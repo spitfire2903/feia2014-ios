@@ -91,6 +91,100 @@
     self.date = eventDate;
 }
 
+-(void)setDateArrayFromJson:(NSArray*)dateArray{
+    int i = 0;
+    NSDateFormatter* formatter = nil;
+    NSDate* eventDate = nil;
+    NSMutableArray* eventDates = nil;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    eventDates = [[NSMutableArray alloc] init];
+    
+    if(dateArray && [dateArray count] > 0){
+        for (i = 0; i < dateArray.count; i++) {
+            eventDate = [formatter dateFromString:[dateArray objectAtIndex:i]];
+            
+            if(i == 0){
+                [self setDate:eventDate];
+            }
+            
+            [eventDates addObject:eventDate];
+        }
+    
+        self.dateArray = eventDates;
+    }
+}
+
+-(void)setDateArrayFromEventDB:(NSArray*)dateArray{
+    int i = 0;
+    NSDate* eventDate = nil;
+    NSMutableArray* eventDates = nil;
+    
+    eventDates = [[NSMutableArray alloc] init];
+    
+    if(dateArray && [dateArray count] > 0){
+        for (i = 0; i < dateArray.count; i++) {
+            eventDate = [dateArray objectAtIndex:i];
+            
+            if(i == 0){
+                [self setDate:eventDate];
+            }
+            
+            [eventDates addObject:eventDate];
+        }
+        
+        self.dateArray = eventDates;
+    }
+}
+
+-(NSManagedObject*)managedObjectFromEvent{
+    NSError *error = nil;
+    AppDelegate *appDelegate = nil;
+    NSManagedObjectContext *context = nil;
+    NSManagedObject *newEvent = nil;
+    NSData* dateArray = nil;
+    
+    appDelegate = [[UIApplication sharedApplication] delegate];
+    context = [appDelegate managedObjectContext];
+    
+    newEvent = [NSEntityDescription insertNewObjectForEntityForName:@"EventDB" inManagedObjectContext:context];
+    
+    dateArray = [NSKeyedArchiver archivedDataWithRootObject:self.dateArray];
+    
+    [newEvent setValue:self.eventId forKey:@"eventId"];
+    [newEvent setValue:self.name forKey:@"name"];
+    [newEvent setValue:self.shortDescription forKey:@"shortDescript"];
+    [newEvent setValue:[NSNumber numberWithInt:self.type] forKey:@"type"];
+    [newEvent setValue:[NSNumber numberWithInt:self.category] forKey:@"category"];
+    [newEvent setValue:[NSNumber numberWithInt:self.duration] forKey:@"duration"];
+    [newEvent setValue:dateArray forKey:@"dateArray"];
+    [newEvent setValue:self.placeData forKey:@"placeData"];
+    [newEvent setValue:self.author forKey:@"author"];
+    
+    
+    return newEvent;
+    //[context save:&error];
+    
+}
+
+-(void)eventFromManagedObject:(EventDB*)eventDB{
+    NSArray* dateArray = nil;
+    
+    dateArray = [NSKeyedUnarchiver unarchiveObjectWithData:eventDB.dateArray];
+    
+    self.eventId = eventDB.eventId;
+    self.name = eventDB.name;
+    self.shortDescription = eventDB.shortDescript;
+    self.type = [eventDB.type intValue];
+    self.category = [eventDB.category intValue];
+    self.duration = [eventDB.duration intValue];
+    [self setDateArrayFromEventDB:dateArray];
+    self.placeData = eventDB.placeData;
+    self.author = eventDB.author;
+    
+}
+
 +(Event*)eventWithId:(int)eventId andName:(NSString*)name andDate:(NSDate*)date andDescription:(NSString*)description andType:(EventType)type andCategory:(EventCategory)category{
     Event* event = nil;
     

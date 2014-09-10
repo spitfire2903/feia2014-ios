@@ -12,6 +12,7 @@
 		201B348319B43D680081CC1C /* FEIACategoryPickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348219B43D680081CC1C /* FEIACategoryPickerTextField.m */; };
 		201B348619B44FA30081CC1C /* UIImage+FEIA.m in Sources */ = {isa = PBXBuildFile; fileRef = 201B348519B44FA30081CC1C /* UIImage+FEIA.m */; };
 		201B348819B4660E0081CC1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201B348719B4660E0081CC1C /* MapKit.framework */; };
+		2031505D19C0105C00D16A8B /* EventDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031505C19C0105C00D16A8B /* EventDB.m */; };
 		20458F2219B7C66E00E65EFE /* eventos.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20458F2119B7C66E00E65EFE /* eventos.txt */; };
 		20458F2319B7C8F800E65EFE /* GeosansLight-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */; };
 		20458F2419B7C8FB00E65EFE /* GeosansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 201B34AF19B6C8830081CC1C /* GeosansLight.ttf */; };
@@ -85,6 +86,8 @@
 		201B348719B4660E0081CC1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		201B34AE19B6C8830081CC1C /* GeosansLight-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeosansLight-Oblique.ttf"; sourceTree = "<group>"; };
 		201B34AF19B6C8830081CC1C /* GeosansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeosansLight.ttf; sourceTree = "<group>"; };
+		2031505B19C0105C00D16A8B /* EventDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDB.h; sourceTree = "<group>"; };
+		2031505C19C0105C00D16A8B /* EventDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDB.m; sourceTree = "<group>"; };
 		20458F2119B7C66E00E65EFE /* eventos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventos.txt; sourceTree = "<group>"; };
 		20458F2519B7C9E500E65EFE /* UIFont+FEIA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FEIA.h"; sourceTree = "<group>"; };
 		20458F2619B7C9E500E65EFE /* UIFont+FEIA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FEIA.m"; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				20CB8A1819AC1C310076C1F8 /* EventManager.m */,
 				20458F3419B7FEE000E65EFE /* MyEvent.h */,
 				20458F3519B7FEE000E65EFE /* MyEvent.m */,
+				2031505B19C0105C00D16A8B /* EventDB.h */,
+				2031505C19C0105C00D16A8B /* EventDB.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2031505D19C0105C00D16A8B /* EventDB.m in Sources */,
 				20458F3319B7CC9400E65EFE /* FEIAButton.m in Sources */,
 				70D3FE68199A534F009DB094 /* FEIA2014.xcdatamodeld in Sources */,
 				20E3F068199AF1E200BA1CA8 /* BaseViewController.m in Sources */,
