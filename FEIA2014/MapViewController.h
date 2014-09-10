@@ -8,7 +8,17 @@
 
 #import "BaseViewController.h"
 #import <MapKit/MapKit.h>
+#import "DisplayMap.h"
 
-@interface MapViewController : BaseViewController
+@class DisplayMap;
+
+@interface MapViewController : BaseViewController<CLLocationManagerDelegate,UITextFieldDelegate,MKMapViewDelegate>
+
+@property (nonatomic,retain) CLLocationManager *locationManager;
+
+@property (nonatomic,retain) CLLocation *currentLocation;
+
+@property NSMutableArray* pinLocations;
+
 
 @end
