@@ -96,42 +96,7 @@
     
     [self.mapView addAnnotation:ann];
 }
-/*
-- (void)putPin:(NSString*)locationName {
-    DisplayMap *ann = [[DisplayMap alloc] initWithCoordinate:self.currentLocation.coordinate];
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    
-    ann.title = locationName;
-    
-    //    [geocoder reverseGeocodeLocation:self.currentLocation completionHandler:
-    //     ^(NSArray *placemarks, NSError *error) {
-    //         //Get nearby address
-    //         CLPlacemark *placemark = [placemarks objectAtIndex:0];
-    //
-    //         ann.subtitle = placemark.locality;
-    //
-    //         [pinLocations addObject:ann];
-    //
-    //         [self.map addAnnotation:ann];
-    //    }];
-    
-    [pinLocations addObject:ann];
-    
-    [self.mapView addAnnotation:ann];
-    
-}
-*/
-/*
-#pragma mark - UITextFieldDelegate
 
--(BOOL)textFieldShouldReturn:(UITextField *)textfield{
-    [textfield resignFirstResponder];
-    
-    [self putPin:textfield.text];
-    
-    return YES;
-}
-*/
 #pragma mark - MKMapViewDelegate
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{

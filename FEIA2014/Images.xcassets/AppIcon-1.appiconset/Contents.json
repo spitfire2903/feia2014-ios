@@ -9,31 +9,31 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ic_icon_29@2x.png",
+      "filename" : "ic_icon_29@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ic_icon_40@2x.png",
+      "filename" : "ic_icon_40.png",
       "scale" : "2x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "AppIcon57x57.png",
+      "filename" : "ic_icon_57.png",
       "scale" : "1x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "AppIcon57x57@2x.png",
+      "filename" : "ic_icon_57@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ic_icon_120.png",
+      "filename" : "ic_icon_60.png",
       "scale" : "2x"
     },
     {
@@ -45,31 +45,31 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "ic_icon_29@2x-1.png",
+      "filename" : "ic_icon_29@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "AppIcon40x40.png",
+      "filename" : "ic_icon_40-1.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "ic_icon_40@2x-1.png",
+      "filename" : "ic_icon_40@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "AppIcon50x50.png",
+      "filename" : "ic_icon_50.png",
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "AppIcon50x50@2x.png",
+      "filename" : "ic_icon_50@2x.png",
       "scale" : "2x"
     },
     {
@@ -81,31 +81,19 @@
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "AppIcon72x72@2x.png",
+      "filename" : "ic_icon_72@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "AppIcon76x76.png",
+      "filename" : "ic_icon_76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "AppIcon76x76@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "512x512",
-      "idiom" : "mac",
-      "filename" : "iTunesArtwork.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "512x512",
-      "idiom" : "mac",
-      "filename" : "iTunesArtwork@2x.png",
+      "filename" : "ic_icon_76@2x.png",
       "scale" : "2x"
     }
   ],

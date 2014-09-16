@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIFont+FEIA.h"
 
 extern NSString* const CATEGORY_FILTER_ALL;
 extern NSString* const CATEGORY_FILTER_VISUAL_ARTS;
