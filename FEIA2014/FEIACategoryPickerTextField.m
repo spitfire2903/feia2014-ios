@@ -91,7 +91,7 @@ NSString* const CATEGORY_FILTER_MUSIC = @"Música";
 {
     UILabel *labelText = [[UILabel alloc] init];
     
-    labelText.font = [UIFont geosansLightWithSize:20];
+    labelText.font = [UIFont systemFontOfSize:20];
     labelText.backgroundColor = [UIColor clearColor];
     [labelText setTextAlignment:NSTextAlignmentCenter];
     [labelText setText:[_itemList objectAtIndex:row]];

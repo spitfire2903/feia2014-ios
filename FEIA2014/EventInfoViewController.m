@@ -60,7 +60,7 @@
     self.eventDate.textColor = [UIColor whiteColor];
     self.eventDescription.textColor = [UIColor colorwithR:139 g:55 b:23 a:1];
     
-    self.eventName.font = [UIFont geosansLightWithSize:26];
+    self.eventName.font = [UIFont systemFontOfSize:26];
     self.eventHeaderImage.image = [[UIImage imageNamed:@"bkg_cabelos_branco"] imageByApplyingAlpha:0.3];
     self.eventHeaderImage.contentMode = UIViewContentModeScaleAspectFill;
     
@@ -125,7 +125,7 @@
 
 -(void)disableSave{
     NSDictionary* barButtonSettings = @{
-        NSFontAttributeName: [UIFont geosansLightWithSize:16]
+        NSFontAttributeName: [UIFont systemFontOfSize:16]
     };
     [self.btnSave setTitle:@"Salvo"];
     [self.btnSave setTitleTextAttributes:barButtonSettings forState:UIControlStateNormal];

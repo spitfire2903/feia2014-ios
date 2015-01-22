@@ -34,9 +34,9 @@
     self.eventAuthor.text = event.author;
     self.eventDate.text = [NSString stringWithFormat:@"%@ %@", [event getDateString], [event getTimeString]];
     
-    self.eventName.font = [UIFont geosansLightWithSize:22];
-    self.eventAuthor.font = [UIFont geosansLightWithSize:20];
-    self.eventDate.font = [UIFont geosansLightObliqueWithSize:18];
+    self.eventName.font = [UIFont systemFontOfSize:22];
+    self.eventAuthor.font = [UIFont systemFontOfSize:20];
+    self.eventDate.font = [UIFont systemFontOfSize:18];
     
     
     self.backgroundColor = [UIColor clearColor];//[UIColor colorWithPatternImage:bkgImage];
